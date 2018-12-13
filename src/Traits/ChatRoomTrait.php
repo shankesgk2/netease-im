@@ -505,7 +505,7 @@ trait ChatRoomTrait
      * @param bool $mute true或false
      * @param bool $needNotify true或false，默认true
      * @param string $notifyExt 通知扩展字段
-     * @return array|bool|mixed|null
+     * @return array|bool
      */
     public function chatRoomMuteRoom(int $roomid, string $operator, bool $mute = false, bool $needNotify = true, string $notifyExt = '')
     {
