@@ -69,15 +69,15 @@ trait UserTrait
      */
     public function userCreateUserId(
         $accid,
+        $mobile = '',
         $name = '',
+        $gender = 0,
         $props = [],
         $icon = '',
         $token = '',
         $sign = '',
         $email = '',
         $birth = '',
-        $mobile = '',
-        $gender = 0,
         $ex = ''
     )
     {

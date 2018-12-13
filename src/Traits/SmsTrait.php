@@ -31,7 +31,7 @@ trait SmsTrait
      * @param bool $needUp 是否需要支持短信上行。true:需要，false:不需要；说明：如果开通了短信上行抄送功能，该参数需要设置为true，其它情况设置无效
      * @return array
      */
-    public function smsSendcode(string $mobile, int $templateid, int $authCode, int $codeLen, string $deviceId = null, bool $needUp = false)
+    public function smsSendcode(string $mobile, int $templateid, int $authCode = null, int $codeLen = 4, string $deviceId = null, bool $needUp = false)
     {
         $data = [
             'mobile' => $mobile,
@@ -76,7 +76,7 @@ trait SmsTrait
      * @param bool $needUp 是否需要支持短信上行。true:需要，false:不需要；说明：如果开通了短信上行抄送功能，该参数需要设置为true，其它情况设置无效
      * @return array
      */
-    public function smsSendtemplate(int $templateid, array $mobiles, array $params, bool $needUp = false)
+    public function smsSendtemplate(int $templateid, array $mobiles, array $params = [], bool $needUp = false)
     {
         $data = [
             'templateid' => $templateid,
