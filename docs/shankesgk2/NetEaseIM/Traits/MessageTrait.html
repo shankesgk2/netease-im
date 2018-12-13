@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>shankesgk2\NetEaseIM\Traits\MessageTrait | 网易云信Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:shankesgk2_NetEaseIM_Traits_MessageTrait" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">网易云信Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../shankesgk2.html">shankesgk2</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM.html">NetEaseIM</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM/Traits.html">Traits</a></li><li class="backslash">\</li><li>MessageTrait</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            MessageTrait
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>MessageTrait</strong>        (<a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>消息功能</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageSendMsg">messageSendMsg</a>(string $from, string $ope, string $to, string $type, array $body, array $option = [], string $pushContent = &#039;&#039;, array $payload = [], array $ext = [], array $forcePushList = [], string $forcePushContent = &#039;&#039;, bool $forcePushAll = false)
+        
+                                            <p>发送普通消息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageSendTxtMsgToUser">messageSendTxtMsgToUser</a>(string $from, string $to, string $msg, string $pushContent)
+        
+                                            <p>给个人发送文本消息封装</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageSendCustomMsgToUser">messageSendCustomMsgToUser</a>(string $from, string $to, string $msg, string $pushContent)
+        
+                                            <p>给个人发送自定义消息封装</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageMsgSendBatchMsg">messageMsgSendBatchMsg</a>($fromAccid, $toAccids, $type, array $body, array $option = [], string $pushcontent = &#039;&#039;, string $payload = &#039;&#039;, array $ext = [], string $bid = &#039;&#039;, string $useYidun = &#039;&#039;)
+        
+                                            <p>批量发送点对点普通消息
+1.给用户发送点对点普通消息，包括文本，图片，语音，视频，地理位置和自定义消息。
+2.最大限500人，只能针对个人,如果批量提供的帐号中有未注册的帐号，会提示并返回给用户。
+3.此接口受频率控制，一个应用一分钟最多调用120次，超过会返回416状态码，并且被屏蔽一段时间；
+具体消息参考官方文档。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageMsgSendAttachMsg">messageMsgSendAttachMsg</a>(string $from, int $msgtype, string $to, array $attach, array $option = [], string $pushcontent = &#039;&#039;, string $payload = &#039;&#039;, string $sound = &#039;&#039;, int $save = 2)
+        
+                                            <p>发送自定义系统通知
+1.自定义系统通知区别于普通消息，方便开发者进行业务逻辑的通知；
+2.目前支持两种类型：点对点类型和群类型（仅限高级群），根据msgType有所区别。
+应用场景：如某个用户给另一个用户发送好友请求信息等，具体attach为请求消息体，第三方可以自行扩展，建议是json格式</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageMsgSendBatchAttachMsg">messageMsgSendBatchAttachMsg</a>($fromAccid, $toAccids, $attach, $option = [], $pushcontent = &#039;&#039;, $payload = &#039;&#039;, $sound = &#039;&#039;, $save = 2)
+        
+                                            <p>批量发送点对点自定义系统通知
+1.系统通知区别于普通消息，应用接收到直接交给上层处理，客户端可不做展示；
+2.目前支持类型：点对点类型；
+3.最大限500人，只能针对个人,如果批量提供的帐号中有未注册的帐号，会提示并返回给用户；
+4.此接口受频率控制，一个应用一分钟最多调用120次，超过会返回416状态码，并且被屏蔽一段时间；
+应用场景：如某个用户给另一个用户发送好友请求信息等，具体attach为请求消息体，第三方可以自行扩展，建议是json格式</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageMsgUpload">messageMsgUpload</a>($content, string $type = &#039;&#039;, string $ishttps = &#039;&#039;, string $expireSec = &#039;&#039;, string $tag = &#039;&#039;)
+        
+                                            <p>文件上传
+文件上传，字符流需要base64编码，最大15M。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageMsgFileUpload">messageMsgFileUpload</a>($content, string $type = &#039;&#039;, string $ishttps = &#039;&#039;, string $expireSec = &#039;&#039;, string $tag = &#039;&#039;)
+        
+                                            <p>文件上传（multipart方式）
+文件上传，最大15M</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageMsgRecall">messageMsgRecall</a>(string $deleteMsgid, int $timetag, int $type, string $from, string $to, string $msg = &#039;&#039;, string $ignoreTime = &#039;&#039;)
+        
+                                            <p>消息撤回
+消息撤回接口，可以撤回一定时间内的点对点与群消息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_messageMsgBroadcastMsg">messageMsgBroadcastMsg</a>(string $body, string $from = &#039;&#039;, bool $isOffline = false, int $ttl = 168, array $targetOs = [])
+        
+                                            <p>发送广播消息
+1、广播消息，可以对应用内的所有用户发送广播消息，广播消息目前暂不支持第三方推送（APNS、小米、华为等）；
+2、广播消息支持离线存储，并可以自定义设置离线存储的有效期，最多保留最近100条离线广播消息；
+3、此接口受频率控制，一个应用一分钟最多调用10次，一天最多调用1000次，超过会返回416状态码；
+4、该功能目前需申请开通，详情可咨询您的客户经理。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_messageSendMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L81">line 81</a></div>
+        <code>                    array
+    <strong>messageSendMsg</strong>(string $from, string $ope, string $to, string $type, array $body, array $option = [], string $pushContent = &#039;&#039;, array $payload = [], array $ext = [], array $forcePushList = [], string $forcePushContent = &#039;&#039;, bool $forcePushAll = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>发送普通消息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ope</td>
+                <td>0：点对点个人消息，1：群消息，其他返回414</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td>ope==0是表示accid即用户id，ope==1表示tid即群id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>0 表示文本消息,
+                      1 表示图片，
+                      2 表示语音，
+                      3 表示视频，
+                      4 表示地理位置信息，
+                      6 表示文件，
+                      100 自定义消息类型</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$body</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$option</td>
+                <td>发消息时特殊指定的行为选项,Json格式，可用于指定消息的漫游，存云端历史，发送方多端同步，推送，消息抄送等特殊行为;option中字段不填时表示默认值
+                      option示例:
+                      {"push":false,"roam":true,"history":false,"sendersync":true,"route":false,"badge":false,"needPushNick":true}</p>
+
+<pre><code>                  字段说明：
+                  1. roam: 该消息是否需要漫游，默认true（需要app开通漫游消息功能）；
+                  2. history: 该消息是否存云端历史，默认true；
+                  3. sendersync: 该消息是否需要发送方多端同步，默认true；
+                  4. push: 该消息是否需要APNS推送或安卓系统通知栏推送，默认true；
+                  5. route: 该消息是否需要抄送第三方；默认true (需要app开通消息抄送功能);
+                  6. badge:该消息是否需要计入到未读计数中，默认true;
+                  7. needPushNick: 推送文案是否需要带上昵称，不设置该参数时默认true;
+</code></pre>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pushContent</td>
+                <td>ios推送内容，不超过150字符，option选项中允许推送（push=true），此字段可以指定推送内容</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$payload</td>
+                <td>ios 推送对应的payload,必须是JSON,不能超过2k字符</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ext</td>
+                <td>开发者扩展字段，长度限制1024字符</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$forcePushList</td>
+                <td>发送群消息时的强推（@操作）用户列表
+                                格式为JSONArray，如["accid1","accid2"]。若forcepushall为true，则forcepushlist为除发送者外的所有有效群成员</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$forcePushContent</td>
+                <td>发送群消息时，针对强推（@操作）列表forcepushlist中的用户，强制推送的内容</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forcePushAll</td>
+                <td>发送群消息时，强推（@操作）列表是否为群里除发送者外的所有有效成员，true或false，默认为false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageSendTxtMsgToUser">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L140">line 140</a></div>
+        <code>                    array
+    <strong>messageSendTxtMsgToUser</strong>(string $from, string $to, string $msg, string $pushContent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>给个人发送文本消息封装</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>发送者accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td>个人用户accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>消息内容</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pushContent</td>
+                <td>ios推送内容</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageSendCustomMsgToUser">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L161">line 161</a></div>
+        <code>                    array
+    <strong>messageSendCustomMsgToUser</strong>(string $from, string $to, string $msg, string $pushContent)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>给个人发送自定义消息封装</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>发送者accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td>个人用户accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>消息内容</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pushContent</td>
+                <td>ios推送内容</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageMsgSendBatchMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L192">line 192</a></div>
+        <code>                    array
+    <strong>messageMsgSendBatchMsg</strong>($fromAccid, $toAccids, $type, array $body, array $option = [], string $pushcontent = &#039;&#039;, string $payload = &#039;&#039;, array $ext = [], string $bid = &#039;&#039;, string $useYidun = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>批量发送点对点普通消息
+1.给用户发送点对点普通消息，包括文本，图片，语音，视频，地理位置和自定义消息。
+2.最大限500人，只能针对个人,如果批量提供的帐号中有未注册的帐号，会提示并返回给用户。
+3.此接口受频率控制，一个应用一分钟最多调用120次，超过会返回416状态码，并且被屏蔽一段时间；
+具体消息参考官方文档。</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$fromAccid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$toAccids</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$body</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$option</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pushcontent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ext</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$bid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$useYidun</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageMsgSendAttachMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L244">line 244</a></div>
+        <code>                    bool|array
+    <strong>messageMsgSendAttachMsg</strong>(string $from, int $msgtype, string $to, array $attach, array $option = [], string $pushcontent = &#039;&#039;, string $payload = &#039;&#039;, string $sound = &#039;&#039;, int $save = 2)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>发送自定义系统通知
+1.自定义系统通知区别于普通消息，方便开发者进行业务逻辑的通知；
+2.目前支持两种类型：点对点类型和群类型（仅限高级群），根据msgType有所区别。
+应用场景：如某个用户给另一个用户发送好友请求信息等，具体attach为请求消息体，第三方可以自行扩展，建议是json格式</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>发送者accid</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$msgtype</td>
+                <td>0：点对点自定义通知，1：群消息自定义通知，其他返回414</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td>msgtype==0是表示accid即用户id，msgtype==1表示tid即群id</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attach</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$option</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$pushcontent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sound</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$save</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageMsgSendBatchAttachMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L293">line 293</a></div>
+        <code>                    array
+    <strong>messageMsgSendBatchAttachMsg</strong>($fromAccid, $toAccids, $attach, $option = [], $pushcontent = &#039;&#039;, $payload = &#039;&#039;, $sound = &#039;&#039;, $save = 2)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>批量发送点对点自定义系统通知
+1.系统通知区别于普通消息，应用接收到直接交给上层处理，客户端可不做展示；
+2.目前支持类型：点对点类型；
+3.最大限500人，只能针对个人,如果批量提供的帐号中有未注册的帐号，会提示并返回给用户；
+4.此接口受频率控制，一个应用一分钟最多调用120次，超过会返回416状态码，并且被屏蔽一段时间；
+应用场景：如某个用户给另一个用户发送好友请求信息等，具体attach为请求消息体，第三方可以自行扩展，建议是json格式</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$fromAccid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$toAccids</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$attach</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$option</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$pushcontent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$payload</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$sound</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$save</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageMsgUpload">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L333">line 333</a></div>
+        <code>                    string|array
+    <strong>messageMsgUpload</strong>($content, string $type = &#039;&#039;, string $ishttps = &#039;&#039;, string $expireSec = &#039;&#039;, string $tag = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>文件上传
+文件上传，字符流需要base64编码，最大15M。</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ishttps</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$expireSec</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageMsgFileUpload">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L359">line 359</a></div>
+        <code>                    string|array
+    <strong>messageMsgFileUpload</strong>($content, string $type = &#039;&#039;, string $ishttps = &#039;&#039;, string $expireSec = &#039;&#039;, string $tag = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>文件上传（multipart方式）
+文件上传，最大15M</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ishttps</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$expireSec</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tag</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageMsgRecall">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L387">line 387</a></div>
+        <code>                    bool|array
+    <strong>messageMsgRecall</strong>(string $deleteMsgid, int $timetag, int $type, string $from, string $to, string $msg = &#039;&#039;, string $ignoreTime = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>消息撤回
+消息撤回接口，可以撤回一定时间内的点对点与群消息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$deleteMsgid</td>
+                <td>要撤回消息的msgid</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timetag</td>
+                <td>要撤回消息的创建时间</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>7:表示点对点消息撤回，8:表示群消息撤回，其它为参数错误</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>发消息的accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td>如果点对点消息，为接收消息的accid,如果群消息，为对应群的tid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>可以带上对应的描述</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ignoreTime</td>
+                <td>1表示忽略撤回时间检测，其它为非法参数，如果需要撤回时间检测，不填即可</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_messageMsgBroadcastMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/MessageTrait.php#L420">line 420</a></div>
+        <code>                    array
+    <strong>messageMsgBroadcastMsg</strong>(string $body, string $from = &#039;&#039;, bool $isOffline = false, int $ttl = 168, array $targetOs = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>发送广播消息
+1、广播消息，可以对应用内的所有用户发送广播消息，广播消息目前暂不支持第三方推送（APNS、小米、华为等）；
+2、广播消息支持离线存储，并可以自定义设置离线存储的有效期，最多保留最近100条离线广播消息；
+3、此接口受频率控制，一个应用一分钟最多调用10次，一天最多调用1000次，超过会返回416状态码；
+4、该功能目前需申请开通，详情可咨询您的客户经理。</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>广播消息内容，最大4096字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>发送者accid</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isOffline</td>
+                <td>是否存离线，true或false，默认false</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ttl</td>
+                <td>存离线状态下的有效期，单位小时，默认7天</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$targetOs</td>
+                <td>目标客户端，默认所有客户端，jsonArray，格式：['ios','aos','pc','web','mac']</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

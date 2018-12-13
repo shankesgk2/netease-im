@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>shankesgk2\NetEaseIM\Traits\HistoryTrait | 网易云信Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:shankesgk2_NetEaseIM_Traits_HistoryTrait" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">网易云信Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../shankesgk2.html">shankesgk2</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM.html">NetEaseIM</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM/Traits.html">Traits</a></li><li class="backslash">\</li><li>HistoryTrait</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            HistoryTrait
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>HistoryTrait</strong>        (<a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>历史记录</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_historyQuerySessionMsg">historyQuerySessionMsg</a>(string $from, string $to, string $begintime, string $endtime = null, int $limit = 100, int $reverse = 2, string $type = null)
+        
+                                            <p>单聊云端历史消息查询</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_historyQueryTeamMsg">historyQueryTeamMsg</a>(string $tid, string $accid, string $begintime, string $endtime = null, int $limit = 100, int $reverse = 2, string $type = null)
+        
+                                            <p>群聊云端历史消息查询</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_historyQueryChatroomMsg">historyQueryChatroomMsg</a>(int $roomid, string $accid, string $timetag, int $limit = 100, int $reverse = 2, string $type = null)
+        
+                                            <p>聊天室云端历史消息查询
+此接口有频控限制，每分钟可调用不超过1200次</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_historyDeleteHistoryMessage">historyDeleteHistoryMessage</a>(int $roomid, string $fromAcc, int $msgTimetag)
+        
+                                            <p>删除聊天室云端历史消息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_historyQueryUserEvents">historyQueryUserEvents</a>(string $accid, string $begintime, string $endtime, int $limit = 100, int $reverse = 2)
+        
+                                            <p>用户登录登出事件记录查询
+跟据时间段查询用户的登录登出记录，每次最多返回100条。
+不提供分页支持，第三方需要跟据时间段来查询。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_historyDeleteMediaFile">historyDeleteMediaFile</a>(int $channelid)
+        
+                                            <p>删除音视频/白板服务器录制文件</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_historyQueryBroadcastMsg">historyQueryBroadcastMsg</a>(int $broadcastId = 0, int $limit = 100, int $type = 1)
+        
+                                            <p>批量查询广播消息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_historyQueryBroadcastMsgById">historyQueryBroadcastMsgById</a>(int $broadcastId)
+        
+                                            <p>查询单条广播消息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_historyQuerySessionMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php#L39">line 39</a></div>
+        <code>                    array
+    <strong>historyQuerySessionMsg</strong>(string $from, string $to, string $begintime, string $endtime = null, int $limit = 100, int $reverse = 2, string $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>单聊云端历史消息查询</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$from</td>
+                <td>发送者accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$to</td>
+                <td>接收者accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$begintime</td>
+                <td>开始时间，ms</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$endtime</td>
+                <td>截止时间，ms</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$reverse</td>
+                <td>1按时间正序排列，2按时间降序排列。其它返回参数414错误.默认是按降序排列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息格式示例： 0,1,2,3；类型支持： 1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:Robot，100:自定义</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_historyQueryTeamMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php#L69">line 69</a></div>
+        <code>                    array
+    <strong>historyQueryTeamMsg</strong>(string $tid, string $accid, string $begintime, string $endtime = null, int $limit = 100, int $reverse = 2, string $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>群聊云端历史消息查询</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>查询用户对应的accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$begintime</td>
+                <td>开始时间，ms</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$endtime</td>
+                <td>截止时间，ms</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$reverse</td>
+                <td>1按时间正序排列，2按时间降序排列。其它返回参数414错误.默认是按降序排列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息格式示例： 0,1,2,3；类型支持： 1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:Robot，100:自定义</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_historyQueryChatroomMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php#L100">line 100</a></div>
+        <code>                    array
+    <strong>historyQueryChatroomMsg</strong>(int $roomid, string $accid, string $timetag, int $limit = 100, int $reverse = 2, string $type = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>聊天室云端历史消息查询
+此接口有频控限制，每分钟可调用不超过1200次</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>查询用户对应的accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$timetag</td>
+                <td>查询的时间戳锚点，13位。reverse=1时timetag为起始时间戳，reverse=2时timetag为终止时间戳</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>本次查询的消息条数上限(最多200条),小于等于0，或者大于200，会提示参数错误</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$reverse</td>
+                <td>1按时间正序排列，2按时间降序排列。其它返回参数414错误.默认是按降序排列</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息格式示例： 0,1,2,3；类型支持： 1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:Robot，100:自定义</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_historyDeleteHistoryMessage">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php#L125">line 125</a></div>
+        <code>                    bool|array
+    <strong>historyDeleteHistoryMessage</strong>(int $roomid, string $fromAcc, int $msgTimetag)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>删除聊天室云端历史消息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fromAcc</td>
+                <td>消息发送者的accid</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$msgTimetag</td>
+                <td>消息的时间戳，单位毫秒，应该拿到原始消息中的时间戳为参数</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_historyQueryUserEvents">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php#L151">line 151</a></div>
+        <code>                    array
+    <strong>historyQueryUserEvents</strong>(string $accid, string $begintime, string $endtime, int $limit = 100, int $reverse = 2)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>用户登录登出事件记录查询
+跟据时间段查询用户的登录登出记录，每次最多返回100条。
+不提供分页支持，第三方需要跟据时间段来查询。</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>要查询用户的accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$begintime</td>
+                <td>开始时间，ms</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$endtime</td>
+                <td>截止时间，ms</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$reverse</td>
+                <td>1按时间正序排列，2按时间降序排列。其它返回参数414错误。默认是按降序排列</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_historyDeleteMediaFile">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php#L173">line 173</a></div>
+        <code>                    array|bool
+    <strong>historyDeleteMediaFile</strong>(int $channelid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>删除音视频/白板服务器录制文件</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$channelid</td>
+                <td>需要删除的文件的通道号</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_historyQueryBroadcastMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php#L190">line 190</a></div>
+        <code>                    array
+    <strong>historyQueryBroadcastMsg</strong>(int $broadcastId = 0, int $limit = 100, int $type = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>批量查询广播消息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$broadcastId</td>
+                <td>查询的起始ID，0表示查询最近的limit条。默认0。</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>查询的条数，最大100。默认100。</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>查询的类型，1表示所有，2表示查询存离线的，3表示查询不存离线的。默认1。</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_historyQueryBroadcastMsgById">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/HistoryTrait.php#L210">line 210</a></div>
+        <code>                    array
+    <strong>historyQueryBroadcastMsgById</strong>(int $broadcastId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>查询单条广播消息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$broadcastId</td>
+                <td>广播消息ID，应用内唯一。</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>shankesgk2\NetEaseIM\Traits\ChatRoomTrait | 网易云信Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:shankesgk2_NetEaseIM_Traits_ChatRoomTrait" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">网易云信Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../shankesgk2.html">shankesgk2</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM.html">NetEaseIM</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM/Traits.html">Traits</a></li><li class="backslash">\</li><li>ChatRoomTrait</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            ChatRoomTrait
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>ChatRoomTrait</strong>        (<a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>聊天室</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomCreate">chatRoomCreate</a>(string $creator, string $name, string $announcement, string $broadcastUrl, array $ext = [])
+        
+                                            <p>创建聊天室</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomGet">chatRoomGet</a>(int $roomid, bool $needOnlineUserCount = false)
+        
+                                            <p>查询聊天室信息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomGetBatch">chatRoomGetBatch</a>(array $roomids, bool $needOnlineUserCount = false)
+        
+                                            <p>批量查询聊天室信息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomUpdate">chatRoomUpdate</a>(int $roodId, string $name = &#039;&#039;, string $announcement = &#039;&#039;, string $broadcastUrl = &#039;&#039;, array $ext = [], bool $needNotify = true, array $notifyExt = [])
+        
+                                            <p>更新聊天室信息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomToggleCloseStatus">chatRoomToggleCloseStatus</a>(int $roomid, string $operator, bool $valid)
+        
+                                            <p>修改聊天室开/关闭状态</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomSetMemberRole">chatRoomSetMemberRole</a>(int $roomid, string $operator, string $target, string $opt, bool $optValue, array $notifyExt = [])
+        
+                                            <p>设置聊天室内用户角色</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomRequestAddress">chatRoomRequestAddress</a>(int $roomid, string $accId, int $clientType = null)
+        
+                                            <p>请求聊天室地址与令牌</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomSendMsg">chatRoomSendMsg</a>(int $roomid, string $msgId, string $fromAccId, int $msgType = null, int $resendFlag = 0, array $attach = [], array $ext = [], bool $highPriority = false)
+        
+                                            <p>发送聊天室消息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomSendTxtMessage">chatRoomSendTxtMessage</a>(int $roomid, string $msgId, string $fromAccId, string $msg, int $resendFlag = 0, array $ext = [])
+        
+                                            <p>发送聊天室文字消息封装</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomAddRobot">chatRoomAddRobot</a>(int $roomid, array $accIds, array $roleExt = [], array $notifyExt = [])
+        
+                                            <p>往聊天室内添加机器人，机器人过期时间为24小时。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomRemoveRobot">chatRoomRemoveRobot</a>(int $roomid, array $accIds)
+        
+                                            <p>从聊天室内删除机器人</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomTemporaryMute">chatRoomTemporaryMute</a>(int $roomid, string $operator, string $target, string $muteDuration, bool $needNotify = true, array $notifyExt = [])
+        
+                                            <p>将聊天室内成员设置为临时禁言</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomQueueOffer">chatRoomQueueOffer</a>(int $roomid, string $key, string $value, string $operator = null, string $transient = null)
+        
+                                            <p>往聊天室有序队列中新加或更新元素</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomQueuePoll">chatRoomQueuePoll</a>(int $roomid, string $key)
+        
+                                            <p>从队列中取出元素</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomQueueList">chatRoomQueueList</a>(int $roomid)
+        
+                                            <p>排序列出队列中所有元素</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomQueueDrop">chatRoomQueueDrop</a>(int $roomid)
+        
+                                            <p>删除清理整个队列</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomQueueInit">chatRoomQueueInit</a>(int $roomid, int $sizeLimit)
+        
+                                            <p>初始化队列</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool|mixed|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomMuteRoom">chatRoomMuteRoom</a>(int $roomid, string $operator, bool $mute = false, bool $needNotify = true, string $notifyExt = &#039;&#039;)
+        
+                                            <p>设置聊天室整体禁言状态（仅创建者和管理员能发言）</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomTopn">chatRoomTopn</a>(int $topn = 100, int $timestamp = null, string $period = &#039;day&#039;, string $orderby = &#039;active&#039;)
+        
+                                            <p>查询聊天室统计指标TopN</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomMembersByPage">chatRoomMembersByPage</a>(int $roomid, int $type = 0, int $endtime = 0, int $limit = 100)
+        
+                                            <p>分页获取成员列表</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomQueryMembers">chatRoomQueryMembers</a>(int $roomid, array $accids)
+        
+                                            <p>批量获取在线成员信息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomUpdateMyRoomRole">chatRoomUpdateMyRoomRole</a>(int $roomid, string $accid, bool $save = false, bool $needNotify = false, string $notifyExt = &#039;&#039;, string $nick = &#039;&#039;, string $avator = &#039;&#039;, string $ext = &#039;&#039;)
+        
+                                            <p>变更聊天室内的角色信息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomQueueBatchUpdateElements">chatRoomQueueBatchUpdateElements</a>(int $roomid, string $operator, array $elements, bool $needNotify = true, string $notifyExt = &#039;&#039;)
+        
+                                            <p>批量更新聊天室队列元素</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_chatRoomQueryUserRoomIds">chatRoomQueryUserRoomIds</a>(string $creator)
+        
+                                            <p>查询用户创建的开启状态聊天室列表</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_chatRoomCreate">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L68">line 68</a></div>
+        <code>                    array
+    <strong>chatRoomCreate</strong>(string $creator, string $name, string $announcement, string $broadcastUrl, array $ext = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>创建聊天室</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$creator</td>
+                <td>聊天室属主的账号accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>聊天室名称，长度限制128个字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$announcement</td>
+                <td>公告，长度限制4096个字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$broadcastUrl</td>
+                <td>直播地址，长度限制1024个字符</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ext</td>
+                <td>扩展字段，最长4096字符</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomGet">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L91">line 91</a></div>
+        <code>                    array
+    <strong>chatRoomGet</strong>(int $roomid, bool $needOnlineUserCount = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>查询聊天室信息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$needOnlineUserCount</td>
+                <td>是否需要返回在线人数，true或false，默认false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomGetBatch">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L108">line 108</a></div>
+        <code>                    array
+    <strong>chatRoomGetBatch</strong>(array $roomids, bool $needOnlineUserCount = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>批量查询聊天室信息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$roomids</td>
+                <td>多个roomid，格式为：["6001","6002","6003"]（JSONArray对应的roomid，如果解析出错，会报414错误），限20个roomid</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$needOnlineUserCount</td>
+                <td>是否需要返回在线人数，true或false，默认false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomUpdate">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L132">line 132</a></div>
+        <code>                    array
+    <strong>chatRoomUpdate</strong>(int $roodId, string $name = &#039;&#039;, string $announcement = &#039;&#039;, string $broadcastUrl = &#039;&#039;, array $ext = [], bool $needNotify = true, array $notifyExt = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>更新聊天室信息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roodId</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>聊天室名称 长度限制128个字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$announcement</td>
+                <td>公告，长度限制4096个字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$broadcastUrl</td>
+                <td>直播地址，长度限制1024个字符</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ext</td>
+                <td>扩展字段，长度限制4096个字符</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$needNotify</td>
+                <td>true或false,是否需要发送更新通知事件，默认true</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$notifyExt</td>
+                <td>通知事件扩展字段，长度限制2048</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomToggleCloseStatus">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L166">line 166</a></div>
+        <code>                    array
+    <strong>chatRoomToggleCloseStatus</strong>(int $roomid, string $operator, bool $valid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>修改聊天室开/关闭状态</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>操作者账号，必须是创建者才可以操作</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$valid</td>
+                <td>true或false，false:关闭聊天室；true:打开聊天室</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomSetMemberRole">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L204">line 204</a></div>
+        <code>                    array
+    <strong>chatRoomSetMemberRole</strong>(int $roomid, string $operator, string $target, string $opt, bool $optValue, array $notifyExt = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>设置聊天室内用户角色</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>操作者账号accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td>被操作者账号accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$opt</td>
+                <td>操作：
+                         1: 设置为管理员，operator必须是创建者
+                         2:设置普通等级用户，operator必须是创建者或管理员
+                         -1:设为黑名单用户，operator必须是创建者或管理员
+                         -2:设为禁言用户，operator必须是创建者或管理员</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$optValue</td>
+                <td>true或false，true:设置；false:取消设置</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$notifyExt</td>
+                <td>通知扩展字段，长度限制2048，请使用json格式</p>
+
+<p>备注：
+返回的type字段可能为：
+LIMITED,          //受限用户,黑名单+禁言
+COMMON,           //普通固定成员
+CREATOR,          //创建者
+MANAGER,          //管理员
+TEMPORARY,        //临时用户,非固定成员</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../shankesgk2/NetEaseIM/Exception/NetEaseIMException.html"><abbr title="shankesgk2\NetEaseIM\Exception\NetEaseIMException">NetEaseIMException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomRequestAddress">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L237">line 237</a></div>
+        <code>                    array
+    <strong>chatRoomRequestAddress</strong>(int $roomid, string $accId, int $clientType = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>请求聊天室地址与令牌</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td>进入聊天室的账号</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$clientType</td>
+                <td>1:weblink; 2:commonlink, 默认1</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomSendMsg">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L272">line 272</a></div>
+        <code>                    array
+    <strong>chatRoomSendMsg</strong>(int $roomid, string $msgId, string $fromAccId, int $msgType = null, int $resendFlag = 0, array $attach = [], array $ext = [], bool $highPriority = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>发送聊天室消息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msgId</td>
+                <td>客户端消息id，使用uuid等随机串，msgId相同的消息会被客户端去重</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fromAccId</td>
+                <td>消息发出者的账号accid</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$msgType</td>
+                <td>消息类型：
+                          0: 表示文本消息，
+                          1: 表示图片，
+                          2: 表示语音，
+                          3: 表示视频，
+                          4: 表示地理位置信息，
+                          6: 表示文件，
+                          10: 表示Tips消息，
+                          100: 自定义消息类型</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$resendFlag</td>
+                <td>重发消息标记，0：非重发消息，1：重发消息，如重发消息会按照msgid检查去重逻辑</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attach</td>
+                <td>消息内容，格式同消息格式示例中的body字段,长度限制2048字符</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ext</td>
+                <td>消息扩展字段，内容可自定义，请使用JSON格式，长度限制4096</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$highPriority</td>
+                <td>可选，true表示是高优先级消息，云信会优先保障投递这部分消息；false表示低优先级消息。默认false。强烈建议应用恰当选择参数，以便在必要时，优先保障应用内的高优先级消息的投递。若全部设置为高优先级，则等于没有设置。</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomSendTxtMessage">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L311">line 311</a></div>
+        <code>                    array
+    <strong>chatRoomSendTxtMessage</strong>(int $roomid, string $msgId, string $fromAccId, string $msg, int $resendFlag = 0, array $ext = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>发送聊天室文字消息封装</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msgId</td>
+                <td>客户端消息id，使用uuid等随机串，msgId相同的消息会被客户端去重</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fromAccId</td>
+                <td>消息发出者的账号accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>文本消息内容</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$resendFlag</td>
+                <td>重发消息标记，0：非重发消息，1：重发消息，如重发消息会按照msgid检查去重逻辑</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$ext</td>
+                <td>消息扩展字段，内容可自定义，请使用JSON格式，长度限制4096</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomAddRobot">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L340">line 340</a></div>
+        <code>                    array
+    <strong>chatRoomAddRobot</strong>(int $roomid, array $accIds, array $roleExt = [], array $notifyExt = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>往聊天室内添加机器人，机器人过期时间为24小时。</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$accIds</td>
+                <td>机器人账号accid列表，必须是有效账号，账号数量上限100个</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$roleExt</td>
+                <td>机器人信息扩展字段，请使用json格式，长度4096字符</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$notifyExt</td>
+                <td>机器人进入聊天室通知的扩展字段，请使用json格式，长度2048字符</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomRemoveRobot">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L362">line 362</a></div>
+        <code>                    array
+    <strong>chatRoomRemoveRobot</strong>(int $roomid, array $accIds)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>从聊天室内删除机器人</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$accIds</td>
+                <td>机器人账号accid列表，必须是有效账号，账号数量上限100个</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomTemporaryMute">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L386">line 386</a></div>
+        <code>                    array
+    <strong>chatRoomTemporaryMute</strong>(int $roomid, string $operator, string $target, string $muteDuration, bool $needNotify = true, array $notifyExt = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>将聊天室内成员设置为临时禁言</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>操作者accid,必须是管理员或创建者</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$target</td>
+                <td>被禁言的目标账号accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$muteDuration</td>
+                <td>0:解除禁言;>0设置禁言的秒数，不能超过2592000秒(30天)</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$needNotify</td>
+                <td>操作完成后是否需要发广播，true或false，默认true</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$notifyExt</td>
+                <td>通知广播事件中的扩展字段，长度限制2048字符</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomQueueOffer">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L413">line 413</a></div>
+        <code>                    array|bool
+    <strong>chatRoomQueueOffer</strong>(int $roomid, string $key, string $value, string $operator = null, string $transient = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>往聊天室有序队列中新加或更新元素</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>elementKey,新元素的UniqKey,长度限制128字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>elementValue,新元素内容，长度限制4096字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>提交这个新元素的操作者accid，默认为该聊天室的创建者，若operator对应的帐号不存在，会返回404错误。若指定的operator不在线，则添加元素成功后的通知事件中的操作者默认为聊天室的创建者；若指定的operator在线，则通知事件的操作者为operator。</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$transient</td>
+                <td>这个新元素的提交者operator的所有聊天室连接在从该聊天室掉线或者离开该聊天室的时候，提交的元素是否需要删除。true：需要删除；false：不需要删除。默认false。当指定该参数为true时，若operator当前不在该聊天室内，则会返回403错误。</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomQueuePoll">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L436">line 436</a></div>
+        <code>                    array
+    <strong>chatRoomQueuePoll</strong>(int $roomid, string $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>从队列中取出元素</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>目前元素的elementKey,长度限制128字符，不填表示取出头上的第一个</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomQueueList">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L455">line 455</a></div>
+        <code>                    array
+    <strong>chatRoomQueueList</strong>(int $roomid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>排序列出队列中所有元素</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomQueueDrop">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L470">line 470</a></div>
+        <code>                    array|bool
+    <strong>chatRoomQueueDrop</strong>(int $roomid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>删除清理整个队列</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomQueueInit">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L487">line 487</a></div>
+        <code>                    bool|array
+    <strong>chatRoomQueueInit</strong>(int $roomid, int $sizeLimit)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>初始化队列</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$sizeLimit</td>
+                <td>队列长度限制，0~1000</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../shankesgk2/NetEaseIM/Exception/NetEaseIMException.html"><abbr title="shankesgk2\NetEaseIM\Exception\NetEaseIMException">NetEaseIMException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomMuteRoom">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L510">line 510</a></div>
+        <code>                    array|bool|mixed|null
+    <strong>chatRoomMuteRoom</strong>(int $roomid, string $operator, bool $mute = false, bool $needNotify = true, string $notifyExt = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>设置聊天室整体禁言状态（仅创建者和管理员能发言）</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td>操作者accid，必须是管理员或创建者</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$mute</td>
+                <td>true或false</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$needNotify</td>
+                <td>true或false，默认true</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$notifyExt</td>
+                <td>通知扩展字段</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool|mixed|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomTopn">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L535">line 535</a></div>
+        <code>                    array
+    <strong>chatRoomTopn</strong>(int $topn = 100, int $timestamp = null, string $period = &#039;day&#039;, string $orderby = &#039;active&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>查询聊天室统计指标TopN</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$topn</td>
+                <td>topn值，可选值 1~500，默认值100</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$timestamp</td>
+                <td>需要查询的指标所在的时间坐标点，不提供则默认当前时间，单位秒/毫秒皆可</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$period</td>
+                <td>统计周期，可选值包括 hour/day, 默认hour</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$orderby</td>
+                <td>取排序值,可选值 active/enter/message,分别表示按日活排序，进入人次排序和消息数排序， 默认active</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomMembersByPage">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L559">line 559</a></div>
+        <code>                    array
+    <strong>chatRoomMembersByPage</strong>(int $roomid, int $type = 0, int $endtime = 0, int $limit = 100)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>分页获取成员列表</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>需要查询的成员类型,0:固定成员;1:非固定成员;2:仅返回在线的固定成员</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$endtime</td>
+                <td>单位毫秒，按时间倒序最后一个成员的时间戳,0表示系统当前时间</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$limit</td>
+                <td>返回条数，&lt;=100</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomQueryMembers">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L581">line 581</a></div>
+        <code>                    array
+    <strong>chatRoomQueryMembers</strong>(int $roomid, array $accids)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>批量获取在线成员信息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td>聊天室id</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$accids</td>
+                <td>账号列表，最多200条</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomUpdateMyRoomRole">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L607">line 607</a></div>
+        <code>                    array|bool
+    <strong>chatRoomUpdateMyRoomRole</strong>(int $roomid, string $accid, bool $save = false, bool $needNotify = false, string $notifyExt = &#039;&#039;, string $nick = &#039;&#039;, string $avator = &#039;&#039;, string $ext = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>变更聊天室内的角色信息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$save</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$needNotify</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$notifyExt</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$nick</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$avator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ext</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomQueueBatchUpdateElements">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L636">line 636</a></div>
+        <code>                    array
+    <strong>chatRoomQueueBatchUpdateElements</strong>(int $roomid, string $operator, array $elements, bool $needNotify = true, string $notifyExt = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>批量更新聊天室队列元素</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$roomid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$operator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$elements</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$needNotify</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$notifyExt</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_chatRoomQueryUserRoomIds">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/ChatRoomTrait.php#L658">line 658</a></div>
+        <code>                    array
+    <strong>chatRoomQueryUserRoomIds</strong>(string $creator)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>查询用户创建的开启状态聊天室列表</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$creator</td>
+                <td>聊天室创建者accid</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

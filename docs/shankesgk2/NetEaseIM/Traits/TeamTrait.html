@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>shankesgk2\NetEaseIM\Traits\TeamTrait | 网易云信Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:shankesgk2_NetEaseIM_Traits_TeamTrait" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">网易云信Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../shankesgk2.html">shankesgk2</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM.html">NetEaseIM</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM/Traits.html">Traits</a></li><li class="backslash">\</li><li>TeamTrait</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            TeamTrait
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>TeamTrait</strong>        (<a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>群组功能(高级群)</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamCreate">teamCreate</a>(string $tname, string $owner, string $icon, array $members, string $custom = &#039;&#039;, string $msg = &#039;msg&#039;, string $announcement = &#039;&#039;, string $intro = &#039;&#039;, int $mAgree = null, int $joinMode = null, int $beInviteMode = null, int $inviteMode = null, int $uptInfoMode = null, int $upCustomMode = null)
+        
+                                            <p>创建群组</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamAdd">teamAdd</a>(string $tid, string $owner, array $members, string $msg, int $mAgree = null, string $attach = &#039;&#039;)
+        
+                                            <p>拉人入群</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamKick">teamKick</a>(string $tid, string $owner, string $member, string $attach)
+        
+                                            <p>踢人出群</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamRemove">teamRemove</a>(string $tid, string $owner)
+        
+                                            <p>解散群</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamUpdate">teamUpdate</a>(string $tid, string $tname, string $owner, string $icon = &#039;&#039;, string $custom = &#039;&#039;, string $announcement = &#039;&#039;, string $intro = &#039;&#039;, int $joinMode = null, int $beInviteMode = null, int $inviteMode = null, int $uptInfoMode = null, int $upCustomMode = null)
+        
+                                            <p>更新群组</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamQuery">teamQuery</a>(array $tids, int $ope = null)
+        
+                                            <p>群信息与成员列表查询
+高级群信息与成员列表查询，一次最多查询30个群相关的信息，跟据ope参数来控制是否带上群成员列表；
+查询群成员会稍微慢一些，所以如果不需要群成员列表可以只查群信息；
+此接口受频率控制，某个应用一分钟最多查询30次，超过会返回416，并且被屏蔽一段时间；
+群成员的群列表信息中增加管理员成员admins的返回</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamQueryDetail">teamQueryDetail</a>(string $tid)
+        
+                                            <p>获取群组详细信息
+查询指定群的详细信息（群信息+成员详细信息）</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamGetMarkReadInfo">teamGetMarkReadInfo</a>(string $tid, string $msgid, string $fromAccid, bool $snapshot = false)
+        
+                                            <p>获取群组已读消息的已读详情信息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_TeamChangeOwner">TeamChangeOwner</a>(string $tid, string $owner, string $newOwner, int $leave = null)
+        
+                                            <p>移交群主
+转换群主身份；
+群主可以选择离开此群，还是留下来成为普通成员。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamAddManager">teamAddManager</a>(string $tid, string $owner, array $members)
+        
+                                            <p>任命管理员
+提升普通成员为群管理员，可以批量，但是一次添加最多不超过10个人。</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamRemoveManager">teamRemoveManager</a>(string $tid, string $owner, array $members)
+        
+                                            <p>移除管理员
+解除管理员身份，可以批量，但是一次解除最多不超过10个人</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamJoinTeams">teamJoinTeams</a>(string $accid)
+        
+                                            <p>获取某个用户所加入高级群的群信息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamUpdateTeamNick">teamUpdateTeamNick</a>(string $tid, string $owner, string $accid, string $nick, string $custom = &#039;&#039;)
+        
+                                            <p>修改群昵称</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamMuteTeam">teamMuteTeam</a>(string $tid, string $accid, int $ope)
+        
+                                            <p>修改消息提醒开关</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamMuteTlist">teamMuteTlist</a>(string $tid, string $owner, string $accid, int $mute = 0)
+        
+                                            <p>禁言群成员</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamLeave">teamLeave</a>(string $tid, string $accid)
+        
+                                            <p>主动退群</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamMuteTlistAll">teamMuteTlistAll</a>(string $tid, string $owner, int $mute = 0)
+        
+                                            <p>将群组整体禁言</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_teamListTeamMute">teamListTeamMute</a>(string $tid, string $owner)
+        
+                                            <p>获取群组禁言列表</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_teamCreate">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L108">line 108</a></div>
+        <code>                    array
+    <strong>teamCreate</strong>(string $tname, string $owner, string $icon, array $members, string $custom = &#039;&#039;, string $msg = &#039;msg&#039;, string $announcement = &#039;&#039;, string $intro = &#039;&#039;, int $mAgree = null, int $joinMode = null, int $beInviteMode = null, int $inviteMode = null, int $uptInfoMode = null, int $upCustomMode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>创建群组</p>                    <p>创建高级群，以邀请的方式发送给用户；
+custom 字段是给第三方的扩展字段，第三方可以基于此字段扩展高级群的功能，构建自己需要的群；
+建群成功会返回tid，需要保存，以便于加人与踢人等后续操作；
+每个用户可创建的群数量有限制，限制值由 IM 套餐的群组配置决定，可登录管理后台查看。</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tname</td>
+                <td>群名称，最大长度64字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主用户帐号，最大长度32字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$icon</td>
+                <td>群头像，最大长度1024字符</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$members</td>
+                <td><a href="JSONArray对应的accid，如果解析出错会报414">"aaa","bbb"</a>，一次最多拉200个成员</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$custom</td>
+                <td>自定义高级群扩展属性，第三方可以跟据此属性自定义扩展自己的群属性。（建议为json）,最大长度1024字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>邀请发送的文字，最大长度150字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$announcement</td>
+                <td>群公告，最大长度1024字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$intro</td>
+                <td>群描述，最大长度512字符</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mAgree</td>
+                <td>管理后台建群时，0不需要被邀请人同意加入群，1需要被邀请人同意才可以加入群。其它会返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$joinMode</td>
+                <td>群建好后，sdk操作时，0不用验证，1需要验证,2不允许任何人加入。其它返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$beInviteMode</td>
+                <td>被邀请人同意方式，0-需要同意(默认),1-不需要同意。其它返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$inviteMode</td>
+                <td>谁可以邀请他人入群，0-管理员(默认),1-所有人。其它返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$uptInfoMode</td>
+                <td>谁可以修改群资料，0-管理员(默认),1-所有人。其它返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$upCustomMode</td>
+                <td>谁可以更新群自定义属性，0-管理员(默认),1-所有人。其它返回414</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamAdd">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L161">line 161</a></div>
+        <code>                    array
+    <strong>teamAdd</strong>(string $tid, string $owner, array $members, string $msg, int $mAgree = null, string $attach = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>拉人入群</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>网易云通信服务器产生，群唯一标识，创建群时会返回，最大长度128字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主用户帐号，最大长度32字符</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$members</td>
+                <td><a href="JSONArray对应的accid，如果解析出错会报414">"aaa","bbb"</a>，一次最多拉200个成员</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td>邀请发送的文字，最大长度150字符</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mAgree</td>
+                <td>管理后台建群时，0不需要被邀请人同意加入群，1需要被邀请人同意才可以加入群。其它会返回414</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attach</td>
+                <td>自定义扩展字段，最大长度512</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>如果邀请的人中存在加群数量超限的情况，会返回faccid</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamKick">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L189">line 189</a></div>
+        <code>                    array|bool
+    <strong>teamKick</strong>(string $tid, string $owner, string $member, string $attach)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>踢人出群</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>网易云通信服务器产生，群唯一标识，创建群时会返回，最大长度128字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主用户帐号，最大长度32字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$member</td>
+                <td>被移除人的accid，用户账号，最大长度字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$attach</td>
+                <td>自定义扩展字段，最大长度512</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamRemove">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L213">line 213</a></div>
+        <code>                    array|bool
+    <strong>teamRemove</strong>(string $tid, string $owner)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>解散群</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>网易云通信服务器产生，群唯一标识，创建群时会返回，最大长度128字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主用户帐号，最大长度32字符</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamUpdate">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L245">line 245</a></div>
+        <code>                    array|bool
+    <strong>teamUpdate</strong>(string $tid, string $tname, string $owner, string $icon = &#039;&#039;, string $custom = &#039;&#039;, string $announcement = &#039;&#039;, string $intro = &#039;&#039;, int $joinMode = null, int $beInviteMode = null, int $inviteMode = null, int $uptInfoMode = null, int $upCustomMode = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>更新群组</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>易云通信服务器产生，群唯一标识，创建群时会返回</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tname</td>
+                <td>群名称，最大长度64字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主用户帐号，最大长度32字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$icon</td>
+                <td>群头像，最大长度1024字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$custom</td>
+                <td>自定义高级群扩展属性，第三方可以跟据此属性自定义扩展自己的群属性。（建议为json）,最大长度1024字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$announcement</td>
+                <td>群公告，最大长度1024字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$intro</td>
+                <td>群描述，最大长度512字符</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$joinMode</td>
+                <td>群建好后，sdk操作时，0不用验证，1需要验证,2不允许任何人加入。其它返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$beInviteMode</td>
+                <td>被邀请人同意方式，0-需要同意(默认),1-不需要同意。其它返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$inviteMode</td>
+                <td>谁可以邀请他人入群，0-管理员(默认),1-所有人。其它返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$uptInfoMode</td>
+                <td>谁可以修改群资料，0-管理员(默认),1-所有人。其它返回414</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$upCustomMode</td>
+                <td>谁可以更新群自定义属性，0-管理员(默认),1-所有人。其它返回414</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamQuery">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L294">line 294</a></div>
+        <code>                    array
+    <strong>teamQuery</strong>(array $tids, int $ope = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>群信息与成员列表查询
+高级群信息与成员列表查询，一次最多查询30个群相关的信息，跟据ope参数来控制是否带上群成员列表；
+查询群成员会稍微慢一些，所以如果不需要群成员列表可以只查群信息；
+此接口受频率控制，某个应用一分钟最多查询30次，超过会返回416，并且被屏蔽一段时间；
+群成员的群列表信息中增加管理员成员admins的返回</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$tids</td>
+                <td>群id列表，如["3083","3084"]</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ope</td>
+                <td>1表示带上群成员列表，0表示不带群成员列表，只返回群信息</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamQueryDetail">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L318">line 318</a></div>
+        <code>                    array
+    <strong>teamQueryDetail</strong>(string $tid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>获取群组详细信息
+查询指定群的详细信息（群信息+成员详细信息）</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群id</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamGetMarkReadInfo">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L336">line 336</a></div>
+        <code>                    mixed
+    <strong>teamGetMarkReadInfo</strong>(string $tid, string $msgid, string $fromAccid, bool $snapshot = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>获取群组已读消息的已读详情信息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msgid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fromAccid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$snapshot</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TeamChangeOwner">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L362">line 362</a></div>
+        <code>                    array|bool
+    <strong>TeamChangeOwner</strong>(string $tid, string $owner, string $newOwner, int $leave = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>移交群主
+转换群主身份；
+群主可以选择离开此群，还是留下来成为普通成员。</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>网易云通信服务器产生，群唯一标识，创建群时会返回，最大长度128字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主用户帐号，最大长度32字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$newOwner</td>
+                <td>新群主帐号，最大长度32字符</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$leave</td>
+                <td>1:群主解除群主后离开群，2：群主解除群主后成为普通成员。其它414</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamAddManager">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L388">line 388</a></div>
+        <code>                    array|bool
+    <strong>teamAddManager</strong>(string $tid, string $owner, array $members)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>任命管理员
+提升普通成员为群管理员，可以批量，但是一次添加最多不超过10个人。</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群id</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主用户accid</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$members</td>
+                <td>用户accid 数组</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamRemoveManager">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L413">line 413</a></div>
+        <code>                    array|bool
+    <strong>teamRemoveManager</strong>(string $tid, string $owner, array $members)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>移除管理员
+解除管理员身份，可以批量，但是一次解除最多不超过10个人</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群唯一标识，创建群时网易云通信服务器产生并返回</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主 accid</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$members</td>
+                <td>用户accid 数组</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamJoinTeams">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L433">line 433</a></div>
+        <code>                    array
+    <strong>teamJoinTeams</strong>(string $accid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>获取某个用户所加入高级群的群信息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>要查询用户的accid</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamUpdateTeamNick">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L452">line 452</a></div>
+        <code>                    array|bool
+    <strong>teamUpdateTeamNick</strong>(string $tid, string $owner, string $accid, string $nick, string $custom = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>修改群昵称</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群唯一标识，创建群时网易云通信服务器产生并返回</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主 accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>要修改群昵称的群成员 accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$nick</td>
+                <td>accid 对应的群昵称，最大长度32字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$custom</td>
+                <td>自定义扩展字段，最大长度1024字节</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamMuteTeam">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L476">line 476</a></div>
+        <code>                    array|bool
+    <strong>teamMuteTeam</strong>(string $tid, string $accid, int $ope)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>修改消息提醒开关</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群唯一标识，创建群时网易云通信服务器产生并返回</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>要操作的群成员accid</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ope</td>
+                <td>1：关闭消息提醒，2：打开消息提醒，其他值无效</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamMuteTlist">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L501">line 501</a></div>
+        <code>                    array|bool
+    <strong>teamMuteTlist</strong>(string $tid, string $owner, string $accid, int $mute = 0)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>禁言群成员</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群唯一标识，创建群时网易云通信服务器产生并返回</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>要操作的群成员accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>禁言对象的accid</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mute</td>
+                <td>1-禁言，0-解禁</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamLeave">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L523">line 523</a></div>
+        <code>                    array|bool
+    <strong>teamLeave</strong>(string $tid, string $accid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>主动退群</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群唯一标识，创建群时网易云通信服务器产生并返回</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>禁言对象的accid</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamMuteTlistAll">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L544">line 544</a></div>
+        <code>                    array|bool
+    <strong>teamMuteTlistAll</strong>(string $tid, string $owner, int $mute = 0)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>将群组整体禁言</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群唯一标识，创建群时网易云通信服务器产生并返回</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>要操作的群成员accid</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mute</td>
+                <td>1-禁言，0-解禁</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_teamListTeamMute">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L565">line 565</a></div>
+        <code>                    array
+    <strong>teamListTeamMute</strong>(string $tid, string $owner)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>获取群组禁言列表</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$tid</td>
+                <td>群唯一标识，创建群时网易云通信服务器产生并返回</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$owner</td>
+                <td>群主的accid</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

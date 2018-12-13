@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>shankesgk2\NetEaseIM\Traits\UserTrait | 网易云信Laravel API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:shankesgk2_NetEaseIM_Traits_UserTrait" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">网易云信Laravel API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../shankesgk2.html">shankesgk2</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM.html">NetEaseIM</a></li><li class="backslash">\</li><li><a href="../../../shankesgk2/NetEaseIM/Traits.html">Traits</a></li><li class="backslash">\</li><li>UserTrait</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            UserTrait
+                
+        </h1>
+    </div>
+
+    <p>    trait
+    <strong>UserTrait</strong>        (<a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>网易云通信ID 用户名片、设置、关系托管</p>                                </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userCreateUserId">userCreateUserId</a>(string $accid, string $name = &#039;&#039;, array $props = [], string $icon = &#039;&#039;, string $token = &#039;&#039;, string $sign = &#039;&#039;, string $email = &#039;&#039;, string $birth = &#039;&#039;, string $mobile = &#039;&#039;, int $gender = 0, string $ex = &#039;&#039;)
+        
+                                            <p>创建云信ID
+1.第三方帐号导入到云信平台；
+2.注意accid，name长度以及考虑管理秘钥token</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userUpdateUserId">userUpdateUserId</a>(string $accid, string $name = &#039;&#039;, array $props = [], string $token = &#039;&#039;)
+        
+                                            <p>更新云信ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userRefreshToken">userRefreshToken</a>($accid)
+        
+                                            <p>更新并获取新token</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userBlockUser">userBlockUser</a>(string $accId, bool $needKick = false)
+        
+                                            <p>封禁网易云通信ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userUnBlockUser">userUnBlockUser</a>(string $accId)
+        
+                                            <p>解封网易云通信ID</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userUpdateUserInfo">userUpdateUserInfo</a>(string $accId, string $name = null, string $icon = null, string $sign = null, string $email = null, string $birth = null, string $mobile = null, string $gender = null, string $ex = null)
+        
+                                            <p>更新用户名片</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetUserInfo">userGetUserInfo</a>(array $accIds)
+        
+                                            <p>获取用户名片</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userSetDonnop">userSetDonnop</a>(string $accId, bool $donnopOpen = false)
+        
+                                            <p>设置桌面端在线时，移动端是否需要推送</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userMute">userMute</a>(string $accid, bool $mute = true)
+        
+                                            <p>账号全局禁言
+设置或取消账号的全局禁言状态；账号被设置为全局禁言后，不能发送“点对点”、“群”、“聊天室”消息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userMuteAv">userMuteAv</a>(string $accid, bool $mute = true)
+        
+                                            <p>账号全局禁用音视频
+账号被设置为禁用音视频后，不能发起点对点音视频、创建多人音视频、发起点对点白板、创建多人白板</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userAddFriend">userAddFriend</a>(string $accId, string $fAccId, string $type, string $msg = &#039;&#039;)
+        
+                                            <p>添加好友</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userUpdateFriend">userUpdateFriend</a>(string $accId, string $fAccId, string $alias)
+        
+                                            <p>更新好友相关信息</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userDeleteFriend">userDeleteFriend</a>(string $accId, string $fAccId)
+        
+                                            <p>删除好友</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userGetFriend">userGetFriend</a>(string $accId, int $createTime = 0)
+        
+                                            <p>获取好友关系</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userSetSpecialRelation">userSetSpecialRelation</a>(string $accId, string $targetAcc, int $relationType, int $value)
+        
+                                            <p>设置黑名单/静音</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_userListBlackAndMuteList">userListBlackAndMuteList</a>(string $accId)
+        
+                                            <p>查看/获取 指定用户的黑名单和静音列表</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_userCreateUserId">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L70">line 70</a></div>
+        <code>                    array
+    <strong>userCreateUserId</strong>(string $accid, string $name = &#039;&#039;, array $props = [], string $icon = &#039;&#039;, string $token = &#039;&#039;, string $sign = &#039;&#039;, string $email = &#039;&#039;, string $birth = &#039;&#039;, string $mobile = &#039;&#039;, int $gender = 0, string $ex = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>创建云信ID
+1.第三方帐号导入到云信平台；
+2.注意accid，name长度以及考虑管理秘钥token</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>[云信ID，最大长度32字节，必须保证一个APP内唯一（只允许字母、数字、半角下划线_、@、半角点以及半角-组成，不区分大小写，会统一小写处理）]</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>[云信ID昵称，最大长度64字节，用来PUSH推送时显示的昵称]</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$props</td>
+                <td>[json属性，第三方可选填，最大长度1024字节]</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$icon</td>
+                <td>[云信ID头像URL，第三方可选填，最大长度1024]</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td>[云信ID可以指定登录token值，最大长度128字节，并更新，如果未指定，会自动生成token，并在创建成功后返回]</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sign</td>
+                <td>用户签名，最大长度256字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td>用户email，最大长度64字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$birth</td>
+                <td>用户生日，最大长度16字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mobile</td>
+                <td>用户mobile，最大长度32字符，只支持国内号码</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$gender</td>
+                <td>用户性别，0表示未知，1表示男，2女表示女，其它会报参数错误</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ex</td>
+                <td>用户名片扩展字段，最大长度1024字符，用户可自行扩展，建议封装成JSON字符串</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userUpdateUserId">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L114">line 114</a></div>
+        <code>                    array|bool
+    <strong>userUpdateUserId</strong>(string $accid, string $name = &#039;&#039;, array $props = [], string $token = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>更新云信ID</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>[云信ID，最大长度32字节，必须保证一个APP内唯一（只允许字母、数字、半角下划线_、@、半角点以及半角-组成，不区分大小写，会统一小写处理）]</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>[云信ID昵称，最大长度64字节，用来PUSH推送时显示的昵称]</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$props</td>
+                <td>[json属性，第三方可选填，最大长度1024字节]</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td>[云信ID可以指定登录token值，最大长度128字节，并更新，如果未指定，会自动生成token，并在创建成功后返回]</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userRefreshToken">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L130">line 130</a></div>
+        <code>                    array
+    <strong>userRefreshToken</strong>($accid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>更新并获取新token</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$accid</td>
+                <td>[云信ID，最大长度32字节，必须保证一个APP内唯一（只允许字母、数字、半角下划线_、@、半角点以及半角-组成，不区分大小写，会统一小写处理）]</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>$result [返回array数组对象]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userBlockUser">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L147">line 147</a></div>
+        <code>                    bool|array
+    <strong>userBlockUser</strong>(string $accId, bool $needKick = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>封禁网易云通信ID</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$needKick</td>
+                <td>是否踢掉被禁用户, 默认 false</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userUnBlockUser">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L163">line 163</a></div>
+        <code>                    bool|array
+    <strong>userUnBlockUser</strong>(string $accId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>解封网易云通信ID</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userUpdateUserInfo">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L187">line 187</a></div>
+        <code>                    bool|array
+    <strong>userUpdateUserInfo</strong>(string $accId, string $name = null, string $icon = null, string $sign = null, string $email = null, string $birth = null, string $mobile = null, string $gender = null, string $ex = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>更新用户名片</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>用户昵称，最大长度64字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$icon</td>
+                <td>用户icon，最大长度1024字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$sign</td>
+                <td>用户签名，最大长度256字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$email</td>
+                <td>用户email，最大长度64字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$birth</td>
+                <td>用户生日，最大长度16字符</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$mobile</td>
+                <td>用户mobile，最大长度32字符，只支持国内号码</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$gender</td>
+                <td>用户性别，0表示未知，1表示男，2女表示女，其它会报参数错误</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$ex</td>
+                <td>用户名片扩展字段，最大长度1024字符，用户可自行扩展，建议封装成JSON字符串</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetUserInfo">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L219">line 219</a></div>
+        <code>                    array
+    <strong>userGetUserInfo</strong>(array $accIds)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>获取用户名片</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$accIds</td>
+                <td>最多可以200个</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userSetDonnop">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L236">line 236</a></div>
+        <code>                    bool|array
+    <strong>userSetDonnop</strong>(string $accId, bool $donnopOpen = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>设置桌面端在线时，移动端是否需要推送</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$donnopOpen</td>
+                <td>桌面端在线时，移动端是否不推送：true:移动端不需要推送，false:移动端需要推送</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userMute">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L254">line 254</a></div>
+        <code>                    bool|array
+    <strong>userMute</strong>(string $accid, bool $mute = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>账号全局禁言
+设置或取消账号的全局禁言状态；账号被设置为全局禁言后，不能发送“点对点”、“群”、“聊天室”消息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>用户帐号</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$mute</td>
+                <td>是否全局禁言：true：全局禁言，false：取消全局禁言</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userMuteAv">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L272">line 272</a></div>
+        <code>                    bool|array
+    <strong>userMuteAv</strong>(string $accid, bool $mute = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>账号全局禁用音视频
+账号被设置为禁用音视频后，不能发起点对点音视频、创建多人音视频、发起点对点白板、创建多人白板</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accid</td>
+                <td>用户帐号</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$mute</td>
+                <td>是否全局禁用音视频：true：全局禁用音视频，false：取消全局禁用音视频</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userAddFriend">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L292">line 292</a></div>
+        <code>                    bool|array
+    <strong>userAddFriend</strong>(string $accId, string $fAccId, string $type, string $msg = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>添加好友</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td>加好友发起者accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fAccId</td>
+                <td>加好友接收者accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>1直接加好友，2请求加好友，3同意加好友，4拒绝加好友</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$msg</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../shankesgk2/NetEaseIM/Exception/NetEaseIMException.html"><abbr title="shankesgk2\NetEaseIM\Exception\NetEaseIMException">NetEaseIMException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userUpdateFriend">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L319">line 319</a></div>
+        <code>                    bool|array
+    <strong>userUpdateFriend</strong>(string $accId, string $fAccId, string $alias)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>更新好友相关信息</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td>发起者accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fAccId</td>
+                <td>要修改朋友的accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$alias</td>
+                <td>给好友增加备注名，限制长度128</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userDeleteFriend">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L336">line 336</a></div>
+        <code>                    bool|array
+    <strong>userDeleteFriend</strong>(string $accId, string $fAccId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>删除好友</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td>发起者accid</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fAccId</td>
+                <td>要删除的好友accid</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userGetFriend">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L353">line 353</a></div>
+        <code>                    array
+    <strong>userGetFriend</strong>(string $accId, int $createTime = 0)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>获取好友关系</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td>发起者accid</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$createTime</td>
+                <td>更新时间戳，接口返回该时间戳之后有更新的好友列表</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userSetSpecialRelation">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L373">line 373</a></div>
+        <code>                    bool|array
+    <strong>userSetSpecialRelation</strong>(string $accId, string $targetAcc, int $relationType, int $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>设置黑名单/静音</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$targetAcc</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$relationType</td>
+                <td>本次操作的关系类型,1:黑名单操作，2:静音列表操作</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$value</td>
+                <td>操作值，0:取消黑名单或静音，1:加入黑名单或静音</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../shankesgk2/NetEaseIM/Exception/NetEaseIMException.html"><abbr title="shankesgk2\NetEaseIM\Exception\NetEaseIMException">NetEaseIMException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_userListBlackAndMuteList">
+        <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L392">line 392</a></div>
+        <code>                    array
+    <strong>userListBlackAndMuteList</strong>(string $accId)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>查看/获取 指定用户的黑名单和静音列表</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$accId</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

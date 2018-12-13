@@ -1,0 +1,43 @@
+{
+  "name": "shankesgk2/netease-im",
+  "description": "NetEase IM & NetEase SMS API, https://dev.yunxin.163.com",
+  "keywords": [
+    "laravel",
+    "neteaseim",
+    "yunxin",
+    "wangyi"
+  ],
+  "require": {
+    "php": ">=7.0",
+    "guzzlehttp/guzzle": "6.3"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "sgk",
+      "email": "shankesgk2@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "support": {
+    "email": "shankesgk2@gmail.com",
+    "issues": "https://github.com/shankesgk2/NetEaseIM/issues",
+    "wiki": "https://github.com/shankesgk2/NetEaseIM",
+    "source": "https://github.com/shankesgk2/NetEaseIM"
+  },
+  "autoload": {
+    "psr-4": {
+      "shankesgk2\\NetEaseIM\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "shankesgk2\\NetEaseIM\\NetEaseIMServiceProvider"
+      ],
+      "aliases": {
+        "NetEaseIM": "shankesgk2\\NetEaseIM\\Facade\\NetEaseIM"
+      }
+    }
+  }
+}
