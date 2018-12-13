@@ -99,7 +99,7 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_smsSendcode">smsSendcode</a>(string $mobile, int $templateid, int $authCode, int $codeLen, string $deviceId = null, bool $needUp = false)
+                    <a href="#method_smsSendcode">smsSendcode</a>(string $mobile, int $templateid, int $authCode = null, int $codeLen = 4, string $deviceId = null, bool $needUp = false)
         
                                             <p>发送短信/语音短信验证码</p>                </div>
                 <div class="col-md-2"></div>
@@ -119,7 +119,7 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_smsSendtemplate">smsSendtemplate</a>(int $templateid, array $mobiles, array $params, bool $needUp = false)
+                    <a href="#method_smsSendtemplate">smsSendtemplate</a>(int $templateid, array $mobiles, array $params = [], bool $needUp = false)
         
                                             <p>发送模板短信</p>                </div>
                 <div class="col-md-2"></div>
@@ -145,7 +145,7 @@
                     <h3 id="method_smsSendcode">
         <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/SmsTrait.php#L34">line 34</a></div>
         <code>                    array
-    <strong>smsSendcode</strong>(string $mobile, int $templateid, int $authCode, int $codeLen, string $deviceId = null, bool $needUp = false)
+    <strong>smsSendcode</strong>(string $mobile, int $templateid, int $authCode = null, int $codeLen = 4, string $deviceId = null, bool $needUp = false)
         </code>
     </h3>
     <div class="details">
@@ -255,7 +255,7 @@
                     <h3 id="method_smsSendtemplate">
         <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/SmsTrait.php#L79">line 79</a></div>
         <code>                    array
-    <strong>smsSendtemplate</strong>(int $templateid, array $mobiles, array $params, bool $needUp = false)
+    <strong>smsSendtemplate</strong>(int $templateid, array $mobiles, array $params = [], bool $needUp = false)
         </code>
     </h3>
     <div class="details">

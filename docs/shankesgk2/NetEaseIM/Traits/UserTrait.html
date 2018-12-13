@@ -99,7 +99,7 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_userCreateUserId">userCreateUserId</a>(string $accid, string $name = &#039;&#039;, array $props = [], string $icon = &#039;&#039;, string $token = &#039;&#039;, string $sign = &#039;&#039;, string $email = &#039;&#039;, string $birth = &#039;&#039;, string $mobile = &#039;&#039;, int $gender = 0, string $ex = &#039;&#039;)
+                    <a href="#method_userCreateUserId">userCreateUserId</a>($accid, $mobile = &#039;&#039;, $name = &#039;&#039;, $gender = 0, $props = [], $icon = &#039;&#039;, $token = &#039;&#039;, $sign = &#039;&#039;, $email = &#039;&#039;, $birth = &#039;&#039;, $ex = &#039;&#039;)
         
                                             <p>创建云信ID
 1.第三方帐号导入到云信平台；
@@ -268,7 +268,7 @@
                     <h3 id="method_userCreateUserId">
         <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/UserTrait.php#L70">line 70</a></div>
         <code>                    array
-    <strong>userCreateUserId</strong>(string $accid, string $name = &#039;&#039;, array $props = [], string $icon = &#039;&#039;, string $token = &#039;&#039;, string $sign = &#039;&#039;, string $email = &#039;&#039;, string $birth = &#039;&#039;, string $mobile = &#039;&#039;, int $gender = 0, string $ex = &#039;&#039;)
+    <strong>userCreateUserId</strong>($accid, $mobile = &#039;&#039;, $name = &#039;&#039;, $gender = 0, $props = [], $icon = &#039;&#039;, $token = &#039;&#039;, $sign = &#039;&#039;, $email = &#039;&#039;, $birth = &#039;&#039;, $ex = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -284,59 +284,59 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td></td>
                 <td>$accid</td>
-                <td>[云信ID，最大长度32字节，必须保证一个APP内唯一（只允许字母、数字、半角下划线_、@、半角点以及半角-组成，不区分大小写，会统一小写处理）]</td>
+                <td></td>
             </tr>
                     <tr>
-                <td>string</td>
-                <td>$name</td>
-                <td>[云信ID昵称，最大长度64字节，用来PUSH推送时显示的昵称]</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$props</td>
-                <td>[json属性，第三方可选填，最大长度1024字节]</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$icon</td>
-                <td>[云信ID头像URL，第三方可选填，最大长度1024]</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$token</td>
-                <td>[云信ID可以指定登录token值，最大长度128字节，并更新，如果未指定，会自动生成token，并在创建成功后返回]</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$sign</td>
-                <td>用户签名，最大长度256字符</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$email</td>
-                <td>用户email，最大长度64字符</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$birth</td>
-                <td>用户生日，最大长度16字符</td>
-            </tr>
-                    <tr>
-                <td>string</td>
+                <td></td>
                 <td>$mobile</td>
-                <td>用户mobile，最大长度32字符，只支持国内号码</td>
+                <td></td>
             </tr>
                     <tr>
-                <td>int</td>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
                 <td>$gender</td>
-                <td>用户性别，0表示未知，1表示男，2女表示女，其它会报参数错误</td>
+                <td></td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td></td>
+                <td>$props</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$icon</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$sign</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$email</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$birth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
                 <td>$ex</td>
-                <td>用户名片扩展字段，最大长度1024字符，用户可自行扩展，建议封装成JSON字符串</td>
+                <td></td>
             </tr>
             </table>
 
