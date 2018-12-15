@@ -146,7 +146,7 @@ trait HistoryTrait
      * @param string $endtime 截止时间，ms
      * @param int $limit 本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误
      * @param int $reverse 1按时间正序排列，2按时间降序排列。其它返回参数414错误。默认是按降序排列
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function historyQueryUserEvents(string $accid, string $begintime, string $endtime, int $limit = 100, int $reverse = 2)
     {
@@ -168,7 +168,7 @@ trait HistoryTrait
     /**
      * 删除音视频/白板服务器录制文件
      * @param int $channelid 需要删除的文件的通道号
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function historyDeleteMediaFile(int $channelid)
     {
@@ -185,7 +185,7 @@ trait HistoryTrait
      * @param int $broadcastId 查询的起始ID，0表示查询最近的limit条。默认0。
      * @param int $limit 查询的条数，最大100。默认100。
      * @param int $type 查询的类型，1表示所有，2表示查询存离线的，3表示查询不存离线的。默认1。
-     * @return array
+     * @return array $result['msgs'] 或 ['error'=>true,'message'=>$message]
      */
     public function historyQueryBroadcastMsg(int $broadcastId = 0, int $limit = 100, int $type = 1)
     {
@@ -205,7 +205,7 @@ trait HistoryTrait
     /**
      * 查询单条广播消息
      * @param int $broadcastId 广播消息ID，应用内唯一。
-     * @return array
+     * @return array $result['msg'] 或 ['error'=>true,'message'=>$message]
      */
     public function historyQueryBroadcastMsgById(int $broadcastId)
     {

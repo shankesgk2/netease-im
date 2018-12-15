@@ -103,7 +103,7 @@ trait TeamTrait
      * @param int $uptInfoMode 谁可以修改群资料，0-管理员(默认),1-所有人。其它返回414
      * @param int $upCustomMode 谁可以更新群自定义属性，0-管理员(默认),1-所有人。其它返回414
      *
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function teamCreate(
         $tname,
@@ -156,7 +156,7 @@ trait TeamTrait
      * @param int $mAgree 管理后台建群时，0不需要被邀请人同意加入群，1需要被邀请人同意才可以加入群。其它会返回414
      * @param string $attach 自定义扩展字段，最大长度512
      *
-     * @return array 如果邀请的人中存在加群数量超限的情况，会返回faccid
+     * @return array $result 或 ['error'=>true,'message'=>$message]，如果邀请的人中存在加群数量超限的情况，会返回faccid
      */
     public function teamAdd($tid, $owner, array $members, $msg, $mAgree = null, $attach = '')
     {
@@ -184,7 +184,7 @@ trait TeamTrait
      * @param string $member 被移除人的accid，用户账号，最大长度字符
      * @param string $attach 自定义扩展字段，最大长度512
      *
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamKick($tid, $owner, $member, $attach)
     {
@@ -208,7 +208,7 @@ trait TeamTrait
      * @param string $tid 网易云通信服务器产生，群唯一标识，创建群时会返回，最大长度128字符
      * @param string $owner 群主用户帐号，最大长度32字符
      *
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamRemove($tid, $owner)
     {
@@ -240,7 +240,7 @@ trait TeamTrait
      * @param int $uptInfoMode 谁可以修改群资料，0-管理员(默认),1-所有人。其它返回414
      * @param int $upCustomMode 谁可以更新群自定义属性，0-管理员(默认),1-所有人。其它返回414
      *
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamUpdate(
         $tid,
@@ -289,7 +289,7 @@ trait TeamTrait
      * @param array $tids 群id列表，如["3083","3084"]
      * @param int $ope 1表示带上群成员列表，0表示不带群成员列表，只返回群信息
      *
-     * @return array
+     * @return array $result['tinfos'] 或 ['error'=>true,'message'=>$message]
      */
     public function teamQuery(array $tids, $ope = null)
     {
@@ -313,7 +313,7 @@ trait TeamTrait
      *
      * @param string $tid 群id
      *
-     * @return array
+     * @return array $result['tinfos'] 或 ['error'=>true,'message'=>$message]
      */
     public function teamQueryDetail(string $tid)
     {
@@ -331,7 +331,7 @@ trait TeamTrait
      * @param string $msgid
      * @param string $fromAccid
      * @param bool $snapshot
-     * @return mixed
+     * @return array $result['data'] 或 ['error'=>true,'message'=>$message]
      */
     public function teamGetMarkReadInfo(string $tid, string $msgid, string $fromAccid, bool $snapshot = false)
     {
@@ -357,7 +357,7 @@ trait TeamTrait
      * @param string $newOwner 新群主帐号，最大长度32字符
      * @param int $leave 1:群主解除群主后离开群，2：群主解除群主后成为普通成员。其它414
      *
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function TeamChangeOwner($tid, $owner, $newOwner, $leave = null)
     {
@@ -383,7 +383,7 @@ trait TeamTrait
      * @param string $owner 群主用户accid
      * @param array $members 用户accid 数组
      *
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamAddManager($tid, $owner, array $members)
     {
@@ -408,7 +408,7 @@ trait TeamTrait
      * @param string $owner 群主 accid
      * @param array $members 用户accid 数组
      *
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamRemoveManager($tid, $owner, array $members)
     {
@@ -428,7 +428,7 @@ trait TeamTrait
     /**
      * 获取某个用户所加入高级群的群信息
      * @param string $accid 要查询用户的accid
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function teamJoinTeams($accid)
     {
@@ -447,7 +447,7 @@ trait TeamTrait
      * @param string $accid 要修改群昵称的群成员 accid
      * @param string $nick accid 对应的群昵称，最大长度32字符
      * @param string $custom 自定义扩展字段，最大长度1024字节
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamUpdateTeamNick($tid, $owner, $accid, $nick, $custom = '')
     {
@@ -471,7 +471,7 @@ trait TeamTrait
      * @param string $tid 群唯一标识，创建群时网易云通信服务器产生并返回
      * @param string $accid 要操作的群成员accid
      * @param int $ope 1：关闭消息提醒，2：打开消息提醒，其他值无效
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamMuteTeam($tid, $accid, $ope)
     {
@@ -496,7 +496,7 @@ trait TeamTrait
      * @param string $accid 禁言对象的accid
      * @param int $mute 1-禁言，0-解禁
      *
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamMuteTlist($tid, $owner, $accid, $mute = 0)
     {
@@ -518,7 +518,7 @@ trait TeamTrait
      * 主动退群
      * @param string $tid 群唯一标识，创建群时网易云通信服务器产生并返回
      * @param string $accid 禁言对象的accid
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamLeave($tid, $accid)
     {
@@ -539,7 +539,7 @@ trait TeamTrait
      * @param string $tid 群唯一标识，创建群时网易云通信服务器产生并返回
      * @param string $owner 要操作的群成员accid
      * @param int $mute 1-禁言，0-解禁
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function teamMuteTlistAll($tid, $owner, $mute = 0)
     {
@@ -560,7 +560,7 @@ trait TeamTrait
      * 获取群组禁言列表
      * @param string $tid 群唯一标识，创建群时网易云通信服务器产生并返回
      * @param string $owner 群主的accid
-     * @return array
+     * @return array $result['mutes'] 或 ['error'=>true,'message'=>$message]
      */
     public function teamListTeamMute($tid, $owner)
     {

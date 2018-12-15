@@ -29,7 +29,7 @@ trait SmsTrait
      * @param int $codeLen 验证码长度，范围4～10，默认为4
      * @param string|null $deviceId 目标设备号，可选参数
      * @param bool $needUp 是否需要支持短信上行。true:需要，false:不需要；说明：如果开通了短信上行抄送功能，该参数需要设置为true，其它情况设置无效
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function smsSendcode(string $mobile, int $templateid, int $authCode = null, int $codeLen = 4, string $deviceId = null, bool $needUp = false)
     {
@@ -53,7 +53,7 @@ trait SmsTrait
      * 校验指定手机号的验证码是否合法。
      * @param string $mobile 目标手机号，非中国大陆手机号码需要填写国家代码(如美国：+1-xxxxxxxxxx)或地区代码(如香港：+852-xxxxxxxx)
      * @param string $code 验证码
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function smsVerifycode(string $mobile, string $code)
     {
@@ -74,7 +74,7 @@ trait SmsTrait
      * @param array $mobiles 接收者号码列表，JSONArray格式,如["186xxxxxxxx","186xxxxxxxx"]，限制接收者号码个数最多为100个；非中国大陆手机号码需要填写国家代码(如美国：+1-xxxxxxxxxx)或地区代码(如香港：+852-xxxxxxxx)
      * @param array $params 短信参数列表，用于依次填充模板，JSONArray格式，每个变量长度不能超过30字，如["xxx","yyy"];对于不包含变量的模板，不填此参数表示模板即短信全文内容
      * @param bool $needUp 是否需要支持短信上行。true:需要，false:不需要；说明：如果开通了短信上行抄送功能，该参数需要设置为true，其它情况设置无效
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function smsSendtemplate(int $templateid, array $mobiles, array $params = [], bool $needUp = false)
     {
@@ -96,7 +96,7 @@ trait SmsTrait
      * 查询通知类和运营类短信发送状态
      * 根据短信的sendid(sendtemplate.action接口中的返回值)，查询短信发送结果。
      * @param int $sendid 发送短信的编号sendid
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function smsQuerystatus(int $sendid)
     {

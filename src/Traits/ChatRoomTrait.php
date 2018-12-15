@@ -63,7 +63,7 @@ trait ChatRoomTrait
      * @param string $announcement 公告，长度限制4096个字符
      * @param string $broadcastUrl 直播地址，长度限制1024个字符
      * @param array $ext 扩展字段，最长4096字符
-     * @return array
+     * @return array $result['chatroom'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomCreate($creator, $name, $announcement, $broadcastUrl, $ext = [])
     {
@@ -86,7 +86,7 @@ trait ChatRoomTrait
      * 查询聊天室信息
      * @param int $roomid 聊天室id
      * @param bool $needOnlineUserCount 是否需要返回在线人数，true或false，默认false
-     * @return array
+     * @return array $result['chatroom'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomGet(int $roomid, $needOnlineUserCount = false)
     {
@@ -103,7 +103,7 @@ trait ChatRoomTrait
      * 批量查询聊天室信息
      * @param array $roomids 多个roomid，格式为：["6001","6002","6003"]（JSONArray对应的roomid，如果解析出错，会报414错误），限20个roomid
      * @param bool $needOnlineUserCount 是否需要返回在线人数，true或false，默认false
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomGetBatch(array $roomids, bool $needOnlineUserCount = false)
     {
@@ -127,7 +127,7 @@ trait ChatRoomTrait
      * @param array $ext 扩展字段，长度限制4096个字符
      * @param bool $needNotify true或false,是否需要发送更新通知事件，默认true
      * @param array $notifyExt 通知事件扩展字段，长度限制2048
-     * @return array
+     * @return array $result['chatroom'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomUpdate(
         $roodId,
@@ -161,7 +161,7 @@ trait ChatRoomTrait
      * @param int $roomid 聊天室id
      * @param string $operator 操作者账号，必须是创建者才可以操作
      * @param bool $valid true或false，false:关闭聊天室；true:打开聊天室
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomToggleCloseStatus(int $roomid, $operator, $valid)
     {
@@ -199,7 +199,7 @@ trait ChatRoomTrait
      * MANAGER,          //管理员
      * TEMPORARY,        //临时用户,非固定成员
      * @throws NetEaseIMException
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomSetMemberRole(int $roomid, $operator, $target, $opt, $optValue, $notifyExt = [])
     {
@@ -232,7 +232,7 @@ trait ChatRoomTrait
      * @param int $roomid 聊天室id
      * @param string $accId 进入聊天室的账号
      * @param int $clientType 1:weblink; 2:commonlink, 默认1
-     * @return array
+     * @return array $result['addr'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomRequestAddress(int $roomid, $accId, $clientType = null)
     {
@@ -267,7 +267,7 @@ trait ChatRoomTrait
      * @param array $attach 消息内容，格式同消息格式示例中的body字段,长度限制2048字符
      * @param array $ext 消息扩展字段，内容可自定义，请使用JSON格式，长度限制4096
      * @param bool $highPriority 可选，true表示是高优先级消息，云信会优先保障投递这部分消息；false表示低优先级消息。默认false。强烈建议应用恰当选择参数，以便在必要时，优先保障应用内的高优先级消息的投递。若全部设置为高优先级，则等于没有设置。
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomSendMsg(
         int $roomid,
@@ -306,7 +306,7 @@ trait ChatRoomTrait
      * @param    string $msg 文本消息内容
      * @param int $resendFlag 重发消息标记，0：非重发消息，1：重发消息，如重发消息会按照msgid检查去重逻辑
      * @param array $ext 消息扩展字段，内容可自定义，请使用JSON格式，长度限制4096
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomSendTxtMessage(
         int $roomid,
@@ -335,7 +335,7 @@ trait ChatRoomTrait
      * @param array $roleExt 机器人信息扩展字段，请使用json格式，长度4096字符
      * @param array $notifyExt 机器人进入聊天室通知的扩展字段，请使用json格式，长度2048字符
      *
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomAddRobot(int $roomid, array $accIds, $roleExt = [], $notifyExt = [])
     {
@@ -357,7 +357,7 @@ trait ChatRoomTrait
      * 从聊天室内删除机器人
      * @param int $roomid 聊天室id
      * @param array $accIds 机器人账号accid列表，必须是有效账号，账号数量上限100个
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomRemoveRobot(int $roomid, array $accIds)
     {
@@ -381,7 +381,7 @@ trait ChatRoomTrait
      * @param string $muteDuration 0:解除禁言;>0设置禁言的秒数，不能超过2592000秒(30天)
      * @param bool $needNotify 操作完成后是否需要发广播，true或false，默认true
      * @param array $notifyExt 通知广播事件中的扩展字段，长度限制2048字符
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomTemporaryMute(int $roomid, $operator, $target, $muteDuration, $needNotify = true, $notifyExt = [])
     {
@@ -408,7 +408,7 @@ trait ChatRoomTrait
      * @param string $value elementValue,新元素内容，长度限制4096字符
      * @param string $operator 提交这个新元素的操作者accid，默认为该聊天室的创建者，若operator对应的帐号不存在，会返回404错误。若指定的operator不在线，则添加元素成功后的通知事件中的操作者默认为聊天室的创建者；若指定的operator在线，则通知事件的操作者为operator。
      * @param string $transient 这个新元素的提交者operator的所有聊天室连接在从该聊天室掉线或者离开该聊天室的时候，提交的元素是否需要删除。true：需要删除；false：不需要删除。默认false。当指定该参数为true时，若operator当前不在该聊天室内，则会返回403错误。
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomQueueOffer(int $roomid, $key, $value, $operator = null, $transient = null)
     {
@@ -431,7 +431,7 @@ trait ChatRoomTrait
      * 从队列中取出元素
      * @param int $roomid
      * @param string $key 目前元素的elementKey,长度限制128字符，不填表示取出头上的第一个
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomQueuePoll(int $roomid, $key)
     {
@@ -450,7 +450,7 @@ trait ChatRoomTrait
     /**
      * 排序列出队列中所有元素
      * @param int $roomid
-     * @return array
+     * @return array $result['desc']['list'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomQueueList(int $roomid)
     {
@@ -465,7 +465,7 @@ trait ChatRoomTrait
     /**
      * 删除清理整个队列
      * @param int $roomid
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomQueueDrop(int $roomid)
     {
@@ -482,7 +482,7 @@ trait ChatRoomTrait
      * @param int $roomid
      * @param int $sizeLimit 队列长度限制，0~1000
      * @throws NetEaseIMException
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomQueueInit(int $roomid, $sizeLimit)
     {
@@ -505,7 +505,7 @@ trait ChatRoomTrait
      * @param bool $mute true或false
      * @param bool $needNotify true或false，默认true
      * @param string $notifyExt 通知扩展字段
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomMuteRoom(int $roomid, string $operator, bool $mute = false, bool $needNotify = true, string $notifyExt = '')
     {
@@ -530,7 +530,7 @@ trait ChatRoomTrait
      * @param int|null $timestamp 需要查询的指标所在的时间坐标点，不提供则默认当前时间，单位秒/毫秒皆可
      * @param string $period 统计周期，可选值包括 hour/day, 默认hour
      * @param string $orderby 取排序值,可选值 active/enter/message,分别表示按日活排序，进入人次排序和消息数排序， 默认active
-     * @return array
+     * @return array $result['data'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomTopn(int $topn = 100, int $timestamp = null, string $period = 'day', string $orderby = 'active')
     {
@@ -554,7 +554,7 @@ trait ChatRoomTrait
      * @param int $type 需要查询的成员类型,0:固定成员;1:非固定成员;2:仅返回在线的固定成员
      * @param int $endtime 单位毫秒，按时间倒序最后一个成员的时间戳,0表示系统当前时间
      * @param int $limit 返回条数，<=100
-     * @return array
+     * @return array $result['desc']['data'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomMembersByPage(int $roomid, int $type = 0, int $endtime = 0, int $limit = 100)
     {
@@ -576,7 +576,7 @@ trait ChatRoomTrait
      * 批量获取在线成员信息
      * @param int $roomid 聊天室id
      * @param array $accids 账号列表，最多200条
-     * @return array
+     * @return array $result['desc']['data'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomQueryMembers(int $roomid, array $accids)
     {
@@ -602,7 +602,7 @@ trait ChatRoomTrait
      * @param string $nick
      * @param string $avator
      * @param string $ext
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomUpdateMyRoomRole(int $roomid, string $accid, bool $save = false, bool $needNotify = false, string $notifyExt = '', string $nick = '', string $avator = '', string $ext = '')
     {
@@ -631,7 +631,7 @@ trait ChatRoomTrait
      * @param array $elements
      * @param bool $needNotify
      * @param string $notifyExt
-     * @return array
+     * @return array $result['desc'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomQueueBatchUpdateElements(int $roomid, string $operator, array $elements, bool $needNotify = true, string $notifyExt = '')
     {
@@ -653,7 +653,7 @@ trait ChatRoomTrait
     /**
      * 查询用户创建的开启状态聊天室列表
      * @param string $creator 聊天室创建者accid
-     * @return array
+     * @return array $result['desc']['roomids'] 或 ['error'=>true,'message'=>$message]
      */
     public function chatRoomQueryUserRoomIds(string $creator)
     {

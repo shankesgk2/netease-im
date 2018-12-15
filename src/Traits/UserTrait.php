@@ -65,7 +65,7 @@ trait UserTrait
      * @param string $email 用户email，最大长度64字符
      * @param string $birth 用户生日，最大长度16字符
      * @param string $ex 用户名片扩展字段，最大长度1024字符，用户可自行扩展，建议封装成JSON字符串
-     * @return array
+     * @return array $result['info'] 或 ['error'=>true,'message'=>$message]
      */
     public function userCreateUserId(
         $accid,
@@ -109,7 +109,7 @@ trait UserTrait
      * @param string $name [云信ID昵称，最大长度64字节，用来PUSH推送时显示的昵称]
      * @param array $props [json属性，第三方可选填，最大长度1024字节]
      * @param string $token [云信ID可以指定登录token值，最大长度128字节，并更新，如果未指定，会自动生成token，并在创建成功后返回]
-     * @return array|bool
+     * @return array|bool true 或 ['error'=>true,'message'=>$message]
      */
     public function userUpdateUserId($accid, $name = '', $props = [], $token = '')
     {
@@ -125,7 +125,7 @@ trait UserTrait
     /**
      * 更新并获取新token
      * @param  $accid [云信ID，最大长度32字节，必须保证一个APP内唯一（只允许字母、数字、半角下划线_、@、半角点以及半角-组成，不区分大小写，会统一小写处理）]
-     * @return array $result [返回array数组对象]
+     * @return array $result['info'] 或 ['error'=>true,'message'=>$message]
      */
     public function userRefreshToken($accid)
     {
@@ -142,7 +142,7 @@ trait UserTrait
      * 封禁网易云通信ID
      * @param string $accId
      * @param bool $needKick 是否踢掉被禁用户, 默认 false
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userBlockUser($accId, $needKick = false)
     {
@@ -158,7 +158,7 @@ trait UserTrait
     /**
      * 解封网易云通信ID
      * @param string $accId
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userUnBlockUser($accId)
     {
@@ -182,7 +182,7 @@ trait UserTrait
      * @param string $mobile 用户mobile，最大长度32字符，只支持国内号码
      * @param string $gender 用户性别，0表示未知，1表示男，2女表示女，其它会报参数错误
      * @param string $ex 用户名片扩展字段，最大长度1024字符，用户可自行扩展，建议封装成JSON字符串
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userUpdateUserInfo(
         $accId,
@@ -214,7 +214,7 @@ trait UserTrait
     /**
      * 获取用户名片
      * @param array $accIds 最多可以200个
-     * @return array
+     * @return array $result['uinfos'] 或 ['error'=>true,'message'=>$message]
      */
     public function userGetUserInfo(array $accIds)
     {
@@ -231,7 +231,7 @@ trait UserTrait
      * 设置桌面端在线时，移动端是否需要推送
      * @param string $accId
      * @param bool $donnopOpen 桌面端在线时，移动端是否不推送：true:移动端不需要推送，false:移动端需要推送
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userSetDonnop($accId, $donnopOpen = false)
     {
@@ -249,7 +249,7 @@ trait UserTrait
      * 设置或取消账号的全局禁言状态；账号被设置为全局禁言后，不能发送“点对点”、“群”、“聊天室”消息
      * @param string $accid 用户帐号
      * @param bool $mute 是否全局禁言：true：全局禁言，false：取消全局禁言
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userMute($accid, $mute = true)
     {
@@ -267,7 +267,7 @@ trait UserTrait
      * 账号被设置为禁用音视频后，不能发起点对点音视频、创建多人音视频、发起点对点白板、创建多人白板
      * @param string $accid 用户帐号
      * @param bool $mute 是否全局禁用音视频：true：全局禁用音视频，false：取消全局禁用音视频
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userMuteAv($accid, $mute = true)
     {
@@ -287,7 +287,7 @@ trait UserTrait
      * @param string $type 1直接加好友，2请求加好友，3同意加好友，4拒绝加好友
      * @param string $msg
      * @throws NetEaseIMException
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userAddFriend($accId, $fAccId, $type, $msg = '')
     {
@@ -314,7 +314,7 @@ trait UserTrait
      * @param string $accId 发起者accid
      * @param string $fAccId 要修改朋友的accid
      * @param string $alias 给好友增加备注名，限制长度128
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userUpdateFriend($accId, $fAccId, $alias)
     {
@@ -331,7 +331,7 @@ trait UserTrait
      * 删除好友
      * @param string $accId 发起者accid
      * @param string $fAccId 要删除的好友accid
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function userDeleteFriend($accId, $fAccId)
     {
@@ -348,7 +348,7 @@ trait UserTrait
      * 获取好友关系
      * @param string $accId 发起者accid
      * @param int $createTime 更新时间戳，接口返回该时间戳之后有更新的好友列表
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function userGetFriend($accId, $createTime = 0)
     {
@@ -367,7 +367,7 @@ trait UserTrait
      * @param string $targetAcc
      * @param int $relationType 本次操作的关系类型,1:黑名单操作，2:静音列表操作
      * @param int $value 操作值，0:取消黑名单或静音，1:加入黑名单或静音
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      * @throws NetEaseIMException
      */
     public function userSetSpecialRelation($accId, $targetAcc, $relationType, $value)
@@ -387,7 +387,7 @@ trait UserTrait
     /**
      * 查看/获取 指定用户的黑名单和静音列表
      * @param string $accId
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function userListBlackAndMuteList($accId)
     {

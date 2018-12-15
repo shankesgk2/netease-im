@@ -76,7 +76,7 @@ Trait MessageTrait
      * @param string $forcePushContent 发送群消息时，针对强推（@操作）列表forcepushlist中的用户，强制推送的内容
      * @param bool $forcePushAll 发送群消息时，强推（@操作）列表是否为群里除发送者外的所有有效成员，true或false，默认为false
      *
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function messageSendMsg(
         $from,
@@ -135,7 +135,7 @@ Trait MessageTrait
      * @param string $to 个人用户accid
      * @param string $msg 消息内容
      * @param string $pushContent ios推送内容
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function messageSendTxtMsgToUser($from, $to, $msg, $pushContent)
     {
@@ -156,7 +156,7 @@ Trait MessageTrait
      * @param string $to 个人用户accid
      * @param string $msg 消息内容
      * @param string $pushContent ios推送内容
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function messageSendCustomMsgToUser($from, $to, $msg, $pushContent)
     {
@@ -187,7 +187,7 @@ Trait MessageTrait
      * @param array $ext
      * @param string $bid
      * @param string $useYidun
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function messageMsgSendBatchMsg($fromAccid, $toAccids, $type, $body, $option = [], $pushcontent = '', $payload = '', $ext = [], $bid = '', $useYidun = '')
     {
@@ -239,7 +239,7 @@ Trait MessageTrait
      * @param string $payload
      * @param string $sound
      * @param int $save
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function messageMsgSendAttachMsg($from, int $msgtype, $to, array $attach, array $option = [], $pushcontent = '', $payload = '', $sound = '', $save = 2)
     {
@@ -288,7 +288,7 @@ Trait MessageTrait
      * @param string $sound
      * @param int $save
      * @param array $option
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function messageMsgSendBatchAttachMsg($fromAccid, $toAccids, $attach, $option = [], $pushcontent = '', $payload = '', $sound = '', $save = 2)
     {
@@ -328,7 +328,7 @@ Trait MessageTrait
      * @param string $ishttps
      * @param string $expireSec
      * @param string $tag
-     * @return string|array
+     * @return string|array $result['url'] 或 ['error'=>true,'message'=>$message]
      */
     public function messageMsgUpload($content, $type = '', $ishttps = '', $expireSec = '', $tag = '')
     {
@@ -354,7 +354,7 @@ Trait MessageTrait
      * @param string $ishttps
      * @param string $expireSec
      * @param string $tag
-     * @return string|array
+     * @return string|array $result['url'] 或 ['error'=>true,'message'=>$message]
      */
     public function messageMsgFileUpload($content, $type = '', $ishttps = '', $expireSec = '', $tag = '')
     {
@@ -382,7 +382,7 @@ Trait MessageTrait
      * @param string $to 如果点对点消息，为接收消息的accid,如果群消息，为对应群的tid
      * @param string $msg 可以带上对应的描述
      * @param string $ignoreTime 1表示忽略撤回时间检测，其它为非法参数，如果需要撤回时间检测，不填即可
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function messageMsgRecall($deleteMsgid, $timetag, $type, $from, $to, $msg = '', $ignoreTime = '')
     {
@@ -401,7 +401,6 @@ Trait MessageTrait
         } else {
             return CodeStatus::codeStatusWithError($result['code']);
         }
-
     }
 
     /**
@@ -415,7 +414,7 @@ Trait MessageTrait
      * @param bool $isOffline 是否存离线，true或false，默认false
      * @param int $ttl 存离线状态下的有效期，单位小时，默认7天
      * @param array $targetOs 目标客户端，默认所有客户端，jsonArray，格式：['ios','aos','pc','web','mac']
-     * @return array
+     * @return array $result['msg'] 或 ['error'=>true,'message'=>$message]
      */
     public function messageMsgBroadcastMsg($body, $from = '', $isOffline = false, $ttl = 168, $targetOs = [])
     {

@@ -171,7 +171,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    mixed
+                    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_teamGetMarkReadInfo">teamGetMarkReadInfo</a>(string $tid, string $msgid, string $fromAccid, bool $snapshot = false)
@@ -387,7 +387,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td>$result 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -452,7 +452,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td>如果邀请的人中存在加群数量超限的情况，会返回faccid</td>
+            <td>$result 或 ['error'=>true,'message'=>$message]，如果邀请的人中存在加群数量超限的情况，会返回faccid</td>
         </tr>
     </table>
 
@@ -507,7 +507,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -552,7 +552,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -647,7 +647,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -696,7 +696,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td>$result['tinfos'] 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -737,7 +737,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td>$result['tinfos'] 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -750,7 +750,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <div class="method-item">
                     <h3 id="method_teamGetMarkReadInfo">
         <div class="location">at         <a href="https://github.com/shankesgk2/netease-im/blob/master/src/Traits/TeamTrait.php#L336">line 336</a></div>
-        <code>                    mixed
+        <code>                    array
     <strong>teamGetMarkReadInfo</strong>(string $tid, string $msgid, string $fromAccid, bool $snapshot = false)
         </code>
     </h3>
@@ -791,8 +791,8 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed</td>
-            <td></td>
+            <td>array</td>
+            <td>$result['data'] 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -849,7 +849,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -900,7 +900,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -951,7 +951,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -991,7 +991,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td>$result 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -1051,7 +1051,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -1101,7 +1101,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -1156,7 +1156,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -1201,7 +1201,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -1251,7 +1251,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array|bool</td>
-            <td></td>
+            <td>true 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
@@ -1296,7 +1296,7 @@ custom 字段是给第三方的扩展字段，第三方可以基于此字段扩�
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td></td>
+            <td>$result['mutes'] 或 ['error'=>true,'message'=>$message]</td>
         </tr>
     </table>
 
