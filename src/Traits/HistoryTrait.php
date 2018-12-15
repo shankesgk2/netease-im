@@ -34,7 +34,7 @@ trait HistoryTrait
      * @param int $limit 本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误
      * @param int $reverse 1按时间正序排列，2按时间降序排列。其它返回参数414错误.默认是按降序排列
      * @param string|null $type 查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息格式示例： 0,1,2,3；类型支持： 1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:Robot，100:自定义
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function historyQuerySessionMsg(string $from, string $to, string $begintime, string $endtime = null, int $limit = 100, int $reverse = 2, string $type = null)
     {
@@ -64,7 +64,7 @@ trait HistoryTrait
      * @param int $limit 本次查询的消息条数上限(最多100条),小于等于0，或者大于100，会提示参数错误
      * @param int $reverse 1按时间正序排列，2按时间降序排列。其它返回参数414错误.默认是按降序排列
      * @param string|null $type 查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息格式示例： 0,1,2,3；类型支持： 1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:Robot，100:自定义
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function historyQueryTeamMsg(string $tid, string $accid, string $begintime, string $endtime = null, int $limit = 100, int $reverse = 2, string $type = null)
     {
@@ -95,7 +95,7 @@ trait HistoryTrait
      * @param int $limit 本次查询的消息条数上限(最多200条),小于等于0，或者大于200，会提示参数错误
      * @param int $reverse 1按时间正序排列，2按时间降序排列。其它返回参数414错误.默认是按降序排列
      * @param string|null $type 查询指定的多个消息类型，类型之间用","分割，不设置该参数则查询全部类型消息格式示例： 0,1,2,3；类型支持： 1:图片，2:语音，3:视频，4:地理位置，5:通知，6:文件，10:提示，11:Robot，100:自定义
-     * @return array
+     * @return array $result 或 ['error'=>true,'message'=>$message]
      */
     public function historyQueryChatroomMsg(int $roomid, string $accid, string $timetag, int $limit = 100, int $reverse = 2, string $type = null)
     {
@@ -120,7 +120,7 @@ trait HistoryTrait
      * @param int $roomid 聊天室id
      * @param string $fromAcc 消息发送者的accid
      * @param int $msgTimetag 消息的时间戳，单位毫秒，应该拿到原始消息中的时间戳为参数
-     * @return bool|array
+     * @return bool|array true 或 ['error'=>true,'message'=>$message]
      */
     public function historyDeleteHistoryMessage(int $roomid, string $fromAcc, int $msgTimetag)
     {
