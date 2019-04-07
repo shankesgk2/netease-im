@@ -8,6 +8,7 @@
 
 namespace shankesgk2\NetEaseIM;
 
+use Exception as ExceptionAlias;
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use shankesgk2\NetEaseIM\Exception\NetEaseIMException;
@@ -51,13 +52,11 @@ class NetEaseIM
      * NetEaseIM constructor.
      * @param $appKey
      * @param $appSecret
-     * @throws NetEaseIMException
      */
     public function __construct($appKey = null, $appSecret = null)
     {
         $appKey = $appKey ?: config('neteaseim.appKey');
         $appSecret = $appSecret ?: config('neteaseim.appSecret');
-        if (!$appKey || !$appSecret) throw new NetEaseIMException('Invalid configuration.');
         $this->appKey = $appKey;
         $this->appSecret = $appSecret;
     }
@@ -67,16 +66,18 @@ class NetEaseIM
      * @param $url
      * @param $data
      * @return mixed
-     * @throws NetEaseIMException
-     * @throws \Exception
      * @return array
+     * @throws ExceptionAlias
+     * @throws NetEaseIMException
      */
     public function post($url, $data)
     {
         $options = [
-            RequestOptions::TIMEOUT => 3,
-            RequestOptions::CONNECT_TIMEOUT => 3,
+            RequestOptions::TIMEOUT => config('neteaseim.httpTimeout'),
+            RequestOptions::CONNECT_TIMEOUT => config('neteaseim.httpTimeout'),
             RequestOptions::DEBUG => $this->debug,
+            RequestOptions::VERIFY => config('neteaseim.httpSslVerifypeer'),
+            RequestOptions::FORCE_IP_RESOLVE => 'v4',
             RequestOptions::HEADERS => $this->getHeaders(),
             RequestOptions::BODY => http_build_query($data),
         ];
@@ -101,8 +102,8 @@ class NetEaseIM
 
     /**
      * @return array
-     * @throws \Exception
      * @return array
+     * @throws ExceptionAlias
      */
     private function getHeaders()
     {
@@ -112,7 +113,7 @@ class NetEaseIM
         return [
             'AppKey' => $this->appKey,  //开发者平台分配的AppKey
             'Nonce' => $nonce,          //随机数（最大长度128个字符）
-            'CurTime' => $curTime,      //当前UTC时间戳，从1970年1月1日0点0 分0 秒开始到现在的秒数(String)
+            'CurTime' => $curTime,      //当前UTC时间戳
             'CheckSum' => $checkSum,    //SHA1(AppSecret + Nonce + CurTime)，三个参数拼接的字符串，进行SHA1哈希计算，转化成16进制字符(String、小写)
             'Content-Type' => 'application/x-www-form-urlencoded;charset=utf-8',
         ];
@@ -120,8 +121,8 @@ class NetEaseIM
 
     /**
      * @return string
-     * @throws \Exception
      * @return string
+     * @throws ExceptionAlias
      */
     private function buildNonce()
     {
