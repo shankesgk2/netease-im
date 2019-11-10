@@ -170,7 +170,7 @@ class NetEaseIM
     public function arrCheckAndPush($array, $key, $value)
     {
         if ($value) {
-            return array_merge($array, [$key => $value]);
+            return array_merge($array, [$key => json_encode($value)]);
         }
         return $array;
     }
