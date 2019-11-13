@@ -14,7 +14,7 @@ Laravel5.5>网易云IM接口
 - 历史记录
 - 短信
 
-这是我写给自己用的，没有测试全部接口。
+这是我写给自己用的，没测试全部接口。
 
 文档API [https://shankesgk2.github.io/netease-im/](https://shankesgk2.github.io/netease-im/)
 
@@ -37,9 +37,9 @@ I don't know
 ###### Publish Configuration
 `php artisan vendor:publish --provider "shankesgk2\NetEaseIM\NetEaseIMServiceProvider"`
 
-在`.env`文字中配置`NETEASEIM_APPKEY`和`NETEASEIM_APPSECRET`
+在`.env`文件配置`NETEASEIM_APPKEY`和`NETEASEIM_APPSECRET`
 
-或者在`config/neteaseim.php`中配置`appKey`和`appSecret`
+或者在`config/neteaseim.php`配置`appKey`和`appSecret`
 
 ##### Usage
 
